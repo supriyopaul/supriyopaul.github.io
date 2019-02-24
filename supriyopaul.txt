@@ -8,10 +8,10 @@ This is the portflio website.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>I h
 domains.<!-- laglaglaglaglaglaglaglaglaglaglaglag --> Cleanliness, quality and automation is what drives most of my development work. I also like to play football and volleyball, watch movies and listening to a very specific genre of Indian music.</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
 
 <p><span id="k">Ubuntu, Bash, Python, Django, Docker, MongoDB, InfluxDB</span> are some of the technologies I have worked on. For more info you could download my <a href="CV.docx" dowload> Resume</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->
-<p>Here are some projects that I have worked on: <a href="https://github.com/deep-compute/logagg"> logagg</a> <a href="https://kwikui.com"> kwikui</a> <a href="https://github.com/deep-compute/deeputil"> deeputil</a> <a href="<a href="https://github.com/deep-compute/docker-file-log-driver"> docker-file-log-driver</a>">.</p><!-- moredelaymoredelaymoredelaymoredelaymoredelaymoredelay-->
+<p>Here are some projects that I have worked on: <a href="https://github.com/deep-compute/logagg"> logagg</a> <a href="https://kwikui.com"> kwikui</a> <a href="https://github.com/deep-compute/deeputil"> deeputil</a> <a href="<a href="https://github.com/deep-compute/docker-file-log-driver"> docker-file-log-driver</a>.</p><!-- moredelaymoredelaymoredelaymoredelaymoredelaymoredelay-->
 
-<p> You can give links to other professional profiles you have on Internet, here: <br> <a href="link1">Profile1</a> <br> <a href="link2">Profile2</a> and <br> <a href="link3">Profile3</a>.</p>
+<p> Check out my profiles, here: <br> <a href="https://github.com/supriyopaul"> Github</a> <br> <a href="https://www.linkedin.com/in/supriyo-paul-982906143/">LinkedIn</a> and <br> <a href="https://angel.co/supriyo-paul?public_profile=1">AngeListt</a>.</p>
 
-You can also give your email ID for contacting you<!-- slightdelayhere-->, feel free to send me an email at<!-- longlonglongcomment --><a href="Your email ID">Email</a>.
+<!-- slightdelayhere-->, Feel free to send me an email at<!-- longlonglongcomment --><a href="paul.supriyo.paul@gmail.com">Email</a>.
 
 <p>Cheers!</p>
