@@ -1,12 +1,13 @@
 <span id="a">supriyo@paul</span>:<span id="b">~</span><span id="c">$</span> cd Supriyo/<!-- laglaglaglaglaglag -->About-me
-<span id="a">supriyo@paul</span>:<span id="b">~</span><span id="c">$</span> cat <!-- laglaglaglaglaglaglaglaglag -->Welcome-not.txt<br/><br/>
-Hi, my name is"<span id="k">Supriyo Paul</span>. <!-- sjkfhskjf -->
+<span id="a">supriyo@paul</span>:<span id="b">~</span><span id="c">$</span> cat <!-- laglaglaglaglaglaglaglaglag -->Welcome-note.txt<br/><br/>
+Hi, my name is <span id="k">Supriyo Paul</span>. <!-- sjkfhskjf -->
 
 This is the portflio website.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>I hope you like it.</p>
 
-<p>I was a technologically-inclined person from very early stages of my life. I love learning new things and having new experiences.  I spend most of my leisure time either reading forums or watching videos about new advancements in the tech world or organising my personal things.I can efficiently interpret user requirements and implement them into the application due to my keen understanding of backend architecture of various systems, thanks to my job experience in a variety of domains.Cleanliness, quality and automation is what drives most of my development work.I also like to play football and volleyball, watch movies and listening to a very specific genre of Indian music.</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
+<p>I was a technologically-inclined person from very early stages of my life. I love learning new things and having new experiences.  I spend most of my leisure time either reading forums or watching videos about new advancements in the tech world or organising my personal things.I can efficiently interpret user requirements and implement them into the application due to my keen understanding of backend architecture of various systems, thanks to my job experience in a variety of
+domains. Cleanliness, quality and automation is what drives most of my development work. I also like to play football and volleyball, watch movies and listening to a very specific genre of Indian music.</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
 
-<p> You can also tell what you've worked and known and what skills you have, you can also give link to your professional portfolio here<a href="link"> portfolio</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->
+<p><span id="k">Ubuntu, Bash, Python, Django, Docker, MongoDB, InfluxDB</span> are some of the technologies I have worked on. For more info you could download my <a href="CV.docx" dowload> reasume</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->
 <p>Tell more about yourself. <br><br><br>Give your project links or something like that. <a href="link"> Here you go</a>.</p><!-- moredelaymoredelaymoredelaymoredelaymoredelaymoredelay-->
 <p> You can give links to other professional profiles you have on Internet, here: <br> <a href="link1">Profile1</a> <br> <a href="link2">Profile2</a> and <br> <a href="link3">Profile3</a>.</p>
 
