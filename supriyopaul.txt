@@ -5,7 +5,7 @@ Hi, my name is <span id="k">Supriyo Paul</span>, <span id="k">Software Engineer<
 I have a keen understanding of <span id="k">Software architecture</span>, thanks to my experience in a variety of domains and in multiple roles.
 <span id="k">Cleanliness, quality, and automation</span> drive most of my development work. I also enjoy playing Badminton, Volleyball, watching Anime and Docuseries.
 
-I've got experience as a <span id="k">Senior Software Engineer</span> where I built a knowledge-graph platform and mentored my team on best practices.
+I've got experience as a <span id="k">Senior Software Engineer at Jio</span> where I built a knowledge-graph platform and mentored my team on best practices.
 I also worked as a <span id="k">Data Engineer and DevOps Engineer at AJIO.com</span> and <span id="k">Associate Software Engineer at Deepcompute</span>.
 
 My education includes, <span id="k">Bachelor of Technology, Computer Science from Mallabhum Institute of Technology Bishnupur</span>.
