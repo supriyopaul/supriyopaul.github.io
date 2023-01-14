@@ -10,8 +10,8 @@ I also worked as a <span id="k">Data Engineer and DevOps Engineer at AJIO.com</s
 
 My education includes, <span id="k">Bachelor of Technology, Computer Science from Mallabhum Institute of Technology Bishnupur</span>.
 
-Some of skills include knowing:
-Technology concepts:<span id="k">OOPs, NoSQL, Time Series Analysis, Graph Databases, Rest, Protocol Buffers (gRPC), DevOps, Containerization, Container Orchestration, CI/CD, Test Automation, Version Control (git), Documentation, Agile methodologies</span>.
+Some of my skills include knowing:
+Technology concepts:<span id="k"> OOPs, NoSQL, Time Series Analysis, Graph Databases, Rest, Protocol Buffers (gRPC), DevOps, Containerization, Container Orchestration, CI/CD, Test Automation, Version Control (git), Documentation, Agile methodologies</span>.
 Programming languages:<span id="k"> Python, Bash, Markdown</span>.
 Database technologies:<span id="k"> ArangoDB, ElasticSearch, MongoDB, SQLite, InfluxDB</span>.
 DevOps:<span id="k"> Linux tools, Docker, Kubernetes, Azure DevOps, Ansible, Elastic Stack (ELK), Prometheus, APM, Nginx, Travis CI, Git</span>.
