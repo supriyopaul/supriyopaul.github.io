@@ -1,18 +1,25 @@
-<span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">$</span> cd Supriyo/About-me
+<span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">$</span> cd About-me/
 <span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">$</span> cat Welcome-note.txt<br/><br/>
-Hi, my name is <span id="k">Supriyo Paul</span>. I am a <span id="k">Software Architect</span> with experience in <span id="k">Python development, DevOps and Automation</span>. This is my portfolio website, hope you like it.
-<p>I am a tech-savvy person who has been interested in technology from an early age. I love learning new technologies and having new experiences. I spend most of my leisure time learning about new advancements in the tech world. I have a keen understanding of <span id="k">backend architecture</span>, thanks to my experience in a variety of domains and multiple roles. <span id="k">Cleanliness, quality, and automation</span> drive most of my development work. I also enjoy playing Badminton, Volleyball, watching Anime and Docuseries.</p>
-<p>I have worked as <span id="k">Senior Software Engineer at Jio</span> where I have built a domain agnostic knowledge-graph platform and it's CRUD APIs, performance monitoring and enhancement of the Knowledge graph system. Mentored the team on best practices and overall maintainability of the various repositories in the BrainOS ecosystem.</p>
-<p>My job experience also include working as a <span id="k">Data Engineer and DevOps Engineer at AJIO.com</span> and <span id="k">Associate Software Engineer at Deepcompute </span> </p>
-<p> My education background includes <span id="k">Bachelor of Technology, Computer Science from Mallabhum Institute of Technology Bishnupur</span> </p>
-<p>My experience and skills include:</p>
-<span id="k">Technology concepts:</span> OOPs, NoSQL, Time Series Analysis, Graph Databases, Rest, Protocol Buffers (gRPC), DevOps, Containerization, Container Orchestration, CI/CD, Test Automation, Version Control (git), Documentation, Agile.
-<span id="k">Programming languages:</span> Python, Bash, Markdown
-<span id="k">Database technologies:</span> ArangoDB, ElasticSearch, MongoDB, SQLite, InfluxDB
-<span id="k">DevOps:</span> Linux tools, Docker, Kubernetes, Azure DevOps, Ansible, Elastic Stack (ELK), Prometheus, APM, Nginx, Travis CI, Git
-<span id="k">Dashboarding:</span> Kibana, Grafana
-<span id="k">Soft skills:</span> Requirement gathering, Team Management, Team Building
-<p>I have also gained some licenses and certifications: <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/JMQWSQBKDSZC">AI for everyone by DeepLearning.AI</a>, <a target="_blank" href="https://www.udemy.com/certificate/UC-1dd3f3c2-d8ad-46b5-9a09-801f26cf0df6/">Protocol Buffers 3 [Java, Golang, Python] by Udemy</a>, <a target="_blank" href="https://www.udemy.com/certificate/UC-d119c94a-5051-48e0-8f9b-6298c8975b81/">Data Structures and Algorithms by Udemy</a> </p>
-You can find more information about my qualifications and experience in my <a target="_blank" href="Supriyo_Paul.pdf">resume</a> and about my previous projects on <a target="_blank" href="https://github.com/supriyopaul">Github</a> and <a target="_blank" href="https://www.linkedin.com/in/supriyopaul95/">LinkedIn</a>.
+Hi, my name is <span id="k">Supriyo Paul</span>, <span id="k">Software Engineer</span> with experience in <span id="k">Python development, DevOps and Automation</span>. This is my portfolio website, hope you like it.
+<p>I am a tech-savvy person who has been interested in technology from an early age. I love learning new technologies and having new experiences. I spend most of my leisure time learning about new advancements in the tech world.
+I have a keen understanding of <span id="k">Software architecture</span>, thanks to my experience in a variety of domains and in multiple roles.
+<span id="k">Cleanliness, quality, and automation</span> drive most of my development work. I also enjoy playing Badminton, Volleyball, watching Anime and Docuseries.
 
+I've got experience as a <span id="k">Senior Software Engineer</span> where I built a knowledge-graph platform and mentored my team on best practices.
+I also worked as a <span id="k">Data Engineer and DevOps Engineer at AJIO.com</span> and <span id="k">Associate Software Engineer at Deepcompute</span>.
+
+My education includes, <span id="k">Bachelor of Technology, Computer Science from Mallabhum Institute of Technology Bishnupur</span>.
+
+Some of skills include knowing:
+Technology concepts:<span id="k">OOPs, NoSQL, Time Series Analysis, Graph Databases, Rest, Protocol Buffers (gRPC), DevOps, Containerization, Container Orchestration, CI/CD, Test Automation, Version Control (git), Documentation, Agile methodologies</span>.
+Programming languages:<span id="k"> Python, Bash, Markdown</span>.
+Database technologies:<span id="k"> ArangoDB, ElasticSearch, MongoDB, SQLite, InfluxDB</span>.
+DevOps:<span id="k"> Linux tools, Docker, Kubernetes, Azure DevOps, Ansible, Elastic Stack (ELK), Prometheus, APM, Nginx, Travis CI, Git</span>.
+Dashboarding tools:<span id="k"> Kibana, Grafana</span>.
+Soft skills:<span id="k"> Requirement gathering, Team Management, Team Building</span>.
+
+I have also gained some certifications: <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/JMQWSQBKDSZC">AI for everyone by DeepLearning.AI</a>, <a target="_blank" href="https://www.udemy.com/certificate/UC-1dd3f3c2-d8ad-46b5-9a09-801f26cf0df6/">Protocol Buffers 3 [Java, Golang, Python] by Udemy</a>, <a target="_blank" href="https://www.udemy.com/certificate/UC-d119c94a-5051-48e0-8f9b-6298c8975b81/">Data Structures and Algorithms by Udemy</a>
+
+You can find more about me in my <a target="_blank" href="https://hackmd.io/JdDF7p3rQkuNXxqJdYdpPg?view">updated resume</a>, or by downloading <a target="_blank" href="SupriyoPaul.pdf">resume.pdf</a> and about my previous projects on <a target="_blank" href="https://github.com/supriyopaul">Github</a> and <a target="_blank" href="https://www.linkedin.com/in/supriyopaul95/">LinkedIn</a>.
+</p>
 Cheers!!!

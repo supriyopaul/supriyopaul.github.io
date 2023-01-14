@@ -1,1 +1,1 @@
-### Profile: https://supriyopaul.github.io/
+### URL: https://supriyopaul.github.io/
