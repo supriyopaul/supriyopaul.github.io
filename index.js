@@ -6,7 +6,7 @@ const TEXT = `<span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">
 <span id="a"># Supriyo Paul</span><br/>
 <span id="op"><strong>Senior Software Engineer</strong></span><br/>
 <span id="op">## Summary</span><br/>
-- <span id="op">Hi, I am @supriyopaul95 on LinkedIn 💼</span><br/>
+- <span id="op">Hi, I am @supriyopaul95 on LinkedIn</span><br/>
 - <span id="op">Software Engineer specializing in Python development, DevOps, and Automation Engineering </span><br/>
 - <span id="op">Currently exploring the realm of knowledge graphs and LLM frameworks </span><br/>
 - <span id="op">Aspiring system architect </span><br/>
