@@ -2,7 +2,7 @@
 The script is written in JavaScript and utilizes the jQuery library.
 */
 const TEXT = `<span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">$</span> cd About-me/<br/>
-<span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">$</span> cat Welcome-note.txt<br/><br/>
+<span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">$</span> cat resume.txt<br/><br/>
 <span id="a"># Supriyo Paul</span><br/>
 <span id="op"><strong>Senior Software Engineer</strong></span><br/>
 <span id="op">## Summary</span><br/>
