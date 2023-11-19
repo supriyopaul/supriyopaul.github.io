@@ -1,7 +1,7 @@
 /* This script is an implementation of the "Type-Writer" effect, used to simulate the typing of text on a web page.
 The script is written in JavaScript and utilizes the jQuery library.
 */
-const TEXT = `<span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">$</span> cd About-me/<br/>
+const TEXT = `
 <span id="b">supriyo@paul</span>:<span id="b"></span><span id="c">$</span> cat resume.txt<br/><br/>
 <span id="a"># Supriyo Paul</span><br/>
 <span id="op"><strong>Senior Software Engineer</strong></span><br/>
