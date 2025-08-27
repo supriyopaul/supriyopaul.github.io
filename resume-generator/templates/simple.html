@@ -13,7 +13,7 @@
         .contact-info a { color: #0056b3; text-decoration: none; }
         .section { margin-bottom: 20px; }
         .section h2 { font-size: 14pt; border-bottom: 2px solid #333; padding-bottom: 5px; margin-bottom: 10px; text-transform: uppercase; }
-        .job, .edu-item { margin-bottom: 15px; }
+        .job, .edu-item, .project-item { margin-bottom: 15px; }
         .job-header { display: flex; justify-content: space-between; font-weight: bold; }
         .job-title { font-size: 12pt; }
         .job-org { font-style: italic; color: #444; }
@@ -21,8 +21,8 @@
         ul { padding-left: 20px; margin-top: 5px; }
         li { margin-bottom: 5px; }
         .summary-list { list-style-type: none; padding-left: 0; }
-        .skills-category { margin-bottom: 8px; }
-        .cert-item { margin-bottom: 8px; }
+        .skills-list { font-size: 10pt; color: #444; margin-top: 5px; }
+        .cert-list { font-size: 10pt; color: #444; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -59,35 +59,67 @@
                 <li>{{ point }}</li>
                 {% endfor %}
             </ul>
+            {% if item.skills %}
+            <div class="skills-list">
+                <strong>Skills:</strong> {{ item.skills | join(', ') }}
+            </div>
+            {% endif %}
+            {% if item.certifications %}
+            <div class="cert-list">
+                <strong>Certifications:</strong>
+                <ul>
+                {% for cert in item.certifications %}
+                    <li><a href="{{ cert.certificateURL }}">{{ cert.name }}</a> - {{ cert.issuer }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
 
     <div class="section">
-        <h2>Skills</h2>
-        {% for category in skillsSummary %}
-        <div class="skills-category">
-            <strong>{{ category.category }}:</strong> {{ category.skills | join(', ') }}
+        <h2>Projects</h2>
+        {% for item in timeline if item.type == 'project' %}
+        <div class="project-item">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">{{ item.heading }}</span>
+                </div>
+                <div class="job-dates">{{ item.startDate.split('-')[0] }}.{{ item.startDate.split('-')[1] }} - {{ item.endDate.split('-')[0] }}.{{ item.endDate.split('-')[1] }}</div>
+            </div>
+            {% if item.skills %}
+            <div class="skills-list">
+                <strong>Skills:</strong> {{ item.skills | join(', ') }}
+            </div>
+            {% endif %}
+            {% if item.certifications %}
+            <div class="cert-list">
+                <strong>Certifications:</strong>
+                <ul>
+                {% for cert in item.certifications %}
+                    <li><a href="{{ cert.certificateURL }}">{{ cert.name }}</a> - {{ cert.issuer }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
-    
+
     <div class="section">
         <h2>Education</h2>
         {% for item in timeline if item.type == 'education' %}
         <div class="edu-item">
             <strong>{{ item.heading }}</strong> - {{ item.organization.name }} ({{ item.startDate.split('-')[0] }} - {{ item.endDate.split('-')[0] }})
+            {% if item.skills %}
+            <div class="skills-list">
+                <strong>Skills:</strong> {{ item.skills | join(', ') }}
+            </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
 
-    <div class="section">
-        <h2>Certificates</h2>
-        {% for cert in certifications %}
-        <div class="cert-item">
-            <strong><a href="{{ cert.certificateURL }}">{{ cert.name }}</a></strong> - {{ cert.issuer }}
-        </div>
-        {% endfor %}
-    </div>
 </body>
 </html>

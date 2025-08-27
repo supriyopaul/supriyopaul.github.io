@@ -20,13 +20,3 @@ yarn-error.log
 
 # PDF files
 *.pdf
-
-# Data files
-career.json
-resume-generator/resume_data.json
-schema.json
-resume-generator/career.json
-resume-generator/schema.json
-
-# Shell scripts
-run.sh
