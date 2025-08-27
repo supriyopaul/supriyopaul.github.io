@@ -1,0 +1,32 @@
+# IDE and OS files
+.DS_Store
+.idea/
+*.suo
+*.user
+*.sln
+
+# Python
+venv/
+*.pyc
+__pycache__/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# PDF files
+*.pdf
+
+# Data files
+career.json
+resume-generator/resume_data.json
+schema.json
+resume-generator/career.json
+resume-generator/schema.json
+
+# Shell scripts
+run.sh
