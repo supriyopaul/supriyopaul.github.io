@@ -56,9 +56,6 @@
             <div class="job-header">
                 <div>
                     <span class="job-title">{{ item.heading }}</span> - <span class="job-org">{{ item.organization.name }}</span>
-                    {% if item.organization.logoUrl %}
-                        <img src="{{ item.organization.logoUrl }}" alt="{{ item.organization.name }} logo" class="job-org-logo">
-                    {% endif %}
                 </div>
                 <div class="job-dates">{{ item.startDate.split('-')[0] }}.{{ item.startDate.split('-')[1] }} - {{ 'Present' if not item.endDate else item.endDate.split('-')[0] + '.' + item.endDate.split('-')[1] }}</div>
             </div>
