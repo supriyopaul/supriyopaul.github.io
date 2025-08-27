@@ -38,16 +38,17 @@
     },
     {
         "id": "project-applibot-2023",
-        "type": "project",
+        "type": "hobby project",
         "heading": "Personal Growth & Projects",
         "startDate": "2023-01-01",
         "endDate": "2024-01-01",
         "skills": ["RAG Architecture", "LLMs", "LangChain", "Vector Databases", "FastAPI", "Full-Stack Development", "Product Ideation"],
         "certifications": [
             { "name": "Data Structures & Algorithms", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-e7d015c6-9477-45e0-9e0c-8d1863d038f6/"},
-            { "name": "System Design", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" }
+            { "name": "System Design", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" },
+            { "name": "50 Days Badge 2022", "issuer": "LeetCode", "certificateURL": "https://leetcode.com/supriyopaul/" }
         ],
-        "personalInterests": ["LeetCode"],
+        "personalInterests": [],
         "resumePoints": [
             "Built a RAG application to automate job applications, leveraging LanceDB, PostgreSQL, and FastAPI.",
             "Utilized LangChain and OpenAI models as the primary LLM framework."

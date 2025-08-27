@@ -66,7 +66,7 @@ My primary contribution was engineering a comprehensive **Knowledge Graph platfo
 
 **2023 – 2024**
 
-To continuously sharpen my foundational skills, I dedicated time to competitive programming. To prepare, I took a dedicated course on **Data Structures & Algorithms** and also completed a comprehensive **[System Design certification](https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/)**. This preparation culminated in a **50-day challenge on LeetCode**, where I earned a badge awarded to the **top 6.9% of global participants**.
+To continuously sharpen my foundational skills, I dedicated time to competitive programming. To prepare, I took a dedicated course on **Data Structures & Algorithms** and also completed a comprehensive **[System Design certification](https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/)**. This preparation culminated in a **[50-day challenge on LeetCode](https://leetcode.com/supriyopaul/)**, where I earned a badge awarded to the **top 6.9% of global participants**.
 
 Fueled by my experience across diverse teams and my ambition as an **aspiring system architect**, I sought a role with greater end-to-end ownership. To aid my job search, I built **`applibot.io`**, a **RAG application** to automate job applications. The tech stack included **LanceDB**, **PostgreSQL**, **FastAPI**, and I leveraged **LangChain** alongside OpenAI models as the primary LLM framework.
 
