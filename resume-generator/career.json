@@ -21,13 +21,14 @@
       "linkedin": "https://www.linkedin.com/in/supriyopaul95",
       "linkedinUser": "supriyopaul95",
       "github": "https://github.com/supriyopaul",
-      "githubUser": "supriyopaul"
+      "githubUser": "supriyopaul",
+      "website": "https://supriyopaul.github.io/"
     }
   },
   "timeline": [
     {
       "id": "exp-hm-2024", "type": "experience", "heading": "Software Engineer II",
-      "organization": { "name": "H&M", "logoUrl": ""}, "role": "Software Engineer II",
+      "organization": { "name": "H&M", "logoUrl": "https://drive.google.com/file/d/1JZ7aeGCQdHjZKfSsysuU-e6ag0yVFKyk/view?usp=drive_link"}, "role": "Software Engineer II",
       "startDate": "2024-03-01", "endDate": null, "theme": { "primaryColor": "#E50019" },
       "resumePoints": [
         "Developing an integration platform to handle complex business objects to and from PLM software APIs and other in-house applications, making them available in a standardized format for over 10+ downstream systems.",
@@ -56,7 +57,7 @@
     },
     {
       "id": "exp-jio-2021", "type": "experience", "heading": "Software Engineer II",
-      "organization": { "name": "Jio Platforms Private Limited", "logoUrl": ""}, "role": "Software Engineer II",
+      "organization": { "name": "Jio Platforms Private Limited", "logoUrl": "https://drive.google.com/file/d/1OLLKlc-sFAXQrqcbv8IqA4tv_JENV-IH/view?usp=drive_link"}, "role": "Software Engineer II",
       "startDate": "2021-09-01", "endDate": "2024-03-01", "theme": { "primaryColor": "#005EB8" },
       "resumePoints": [
         "Engineered a comprehensive Knowledge-graph platform, encompassing micro-services like Schema, Data, and Search, to facilitate the semantic storage and retrieval of domain knowledge, enhancing data accessibility and interoperability.",
