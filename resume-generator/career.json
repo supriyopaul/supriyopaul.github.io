@@ -39,7 +39,7 @@
     {
         "id": "project-applibot-2023",
         "type": "project",
-        "heading": "Hobby project: applibot.io",
+        "heading": "applibot.io",
         "startDate": "2023-01-01",
         "endDate": "2024-01-01",
         "skills": ["RAG Architecture", "LLMs", "LangChain", "Vector Databases", "FastAPI", "Full-Stack Development", "Product Ideation"],
@@ -82,7 +82,7 @@
     },
     {
       "id": "exp-deepcompute-2017", "type": "experience", "heading": "Associate Software Engineer",
-      "organization": { "name": "Deepcompute LLC", "logoUrl": ""}, "role": "Associate Software Engineer",
+      "organization": { "name": "Deepcompute LLC", "logoUrl": "http://www.deepcompute.com/"}, "role": "Associate Software Engineer",
       "startDate": "2017-08-01", "endDate": "2019-09-01", "theme": { "primaryColor": "#34495E" },
       "resumePoints": [
         "Collaborated with cross-functional teams to develop and enhance open-source libraries and modules such as logagg, basescript, deeputil, contributing to the creation of versatile and reusable software components.",

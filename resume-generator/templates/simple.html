@@ -22,7 +22,12 @@
         li { margin-bottom: 5px; }
         .summary-list { list-style-type: none; padding-left: 0; }
         .skills-list { font-size: 10pt; color: #444; margin-top: 5px; }
-        .cert-list { font-size: 10pt; color: #444; margin-top: 5px; }
+        .job-org-logo {
+            max-height: 20px;
+            max-width: 100px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -51,6 +56,9 @@
             <div class="job-header">
                 <div>
                     <span class="job-title">{{ item.heading }}</span> - <span class="job-org">{{ item.organization.name }}</span>
+                    {% if item.organization.logoUrl %}
+                        <img src="{{ item.organization.logoUrl }}" alt="{{ item.organization.name }} logo" class="job-org-logo">
+                    {% endif %}
                 </div>
                 <div class="job-dates">{{ item.startDate.split('-')[0] }}.{{ item.startDate.split('-')[1] }} - {{ 'Present' if not item.endDate else item.endDate.split('-')[0] + '.' + item.endDate.split('-')[1] }}</div>
             </div>
