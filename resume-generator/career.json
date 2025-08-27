@@ -38,7 +38,7 @@
     },
     {
         "id": "project-applibot-2023",
-        "type": "hobby project",
+        "type": "project",
         "heading": "Personal Growth & Projects",
         "startDate": "2023-01-01",
         "endDate": "2024-01-01",
@@ -46,7 +46,7 @@
         "certifications": [
             { "name": "Data Structures & Algorithms", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-e7d015c6-9477-45e0-9e0c-8d1863d038f6/"},
             { "name": "System Design", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" },
-            { "name": "50 Days Badge 2022", "issuer": "LeetCode", "certificateURL": "https://leetcode.com/supriyopaul/" }
+            { "name": "50 Days Badge 2022", "issuer": "LeetCode", "certificateURL": "https://drive.google.com/file/d/1zZOSrQ-3x5oreK_nLA0wplgx-I7muvmc/view?usp=sharing" }
         ],
         "personalInterests": [],
         "resumePoints": [
