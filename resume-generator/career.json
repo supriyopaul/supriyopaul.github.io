@@ -9,7 +9,7 @@
         "Currently exploring the realm of knowledge graphs and LLM frameworks 🧠",
         "Aspiring system architect 🏗️",
         "Passionate advocate for clean, maintainable code ✨",
-        "Tinkering with Applibot my latest hobby project! 🤖",
+        "Tinkering with applibot.io my latest hobby project! 🤖",
         "Hobbies include Badminton, Volleyball, watching Anime, and Docuseries 🎬",
         "Favorite authors: Yuval Noah Harari and Paulo Coelho ✍️"
     ],
@@ -47,7 +47,11 @@
             { "name": "Data Structures & Algorithms", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-e7d015c6-9477-45e0-9e0c-8d1863d038f6/"},
             { "name": "System Design", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" }
         ],
-        "personalInterests": ["LeetCode"]
+        "personalInterests": ["LeetCode"],
+        "resumePoints": [
+            "Built a RAG application to automate job applications, leveraging LanceDB, PostgreSQL, and FastAPI.",
+            "Utilized LangChain and OpenAI models as the primary LLM framework."
+        ]
     },
     {
       "id": "exp-jio-2021", "type": "experience", "heading": "Software Engineer II",

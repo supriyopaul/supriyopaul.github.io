@@ -88,6 +88,11 @@
                 </div>
                 <div class="job-dates">{{ item.startDate.split('-')[0] }}.{{ item.startDate.split('-')[1] }} - {{ item.endDate.split('-')[0] }}.{{ item.endDate.split('-')[1] }}</div>
             </div>
+            <ul>
+                {% for point in item.resumePoints %}
+                <li>{{ point }}</li>
+                {% endfor %}
+            </ul>
             {% if item.skills %}
             <div class="skills-list">
                 <strong>Skills:</strong> {{ item.skills | join(', ') }}
@@ -112,11 +117,6 @@
         {% for item in timeline if item.type == 'education' %}
         <div class="edu-item">
             <strong>{{ item.heading }}</strong> - {{ item.organization.name }} ({{ item.startDate.split('-')[0] }} - {{ item.endDate.split('-')[0] }})
-            {% if item.skills %}
-            <div class="skills-list">
-                <strong>Skills:</strong> {{ item.skills | join(', ') }}
-            </div>
-            {% endif %}
         </div>
         {% endfor %}
     </div>
