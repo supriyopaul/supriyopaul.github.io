@@ -37,9 +37,9 @@
         {"category": "DEVOPS & TOOLS", "skills": ["Google Cloud Platform (GCP)", "GKE"]},
         {"category": "DATABASES", "skills": ["SpannerDB"]},
         {"category": "PROGRAMMING LANGUAGES", "skills": ["Python"]},
-        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["FastAPI", "Enterprise Integration Patterns", "End-to-End SDLC Ownership"]}
+        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["PLM systems", "Enterprise Integration Patterns", "End-to-End SDLC Ownership"]}
       ],
-      "personalInterests": ["badminton", "anime", "cooking", "Yuval Noah Harari", "Paulo Coelho"]
+      "personalInterests": ["Badminton"]
     },
     {
         "id": "project-applibot-2023",
@@ -57,7 +57,7 @@
             { "name": "System Design", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" },
             { "name": "Top 6.9% Badge 2022", "issuer": "LeetCode", "certificateURL": "https://drive.google.com/file/d/1zZOSrQ-3x5oreK_nLA0wplgx-I7muvmc/view?usp=sharing" }
         ],
-        "personalInterests": [],
+        "personalInterests": ["Anime", "Cooking"],
         "resumePoints": [
             "Built a RAG application to automate job applications, leveraging LanceDB, PostgreSQL, and FastAPI.",
             "Utilized LangChain and OpenAI models as the primary LLM framework."
@@ -98,7 +98,8 @@
         {"category": "DEVOPS & TOOLS", "skills": ["ELK Stack Administration", "Apache Kafka Management", "Prometheus", "Ansible", "Grafana", "Kibana", "Dashboarding"]},
         {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Large-Scale Data Architecture", "System Scalability & Performance Tuning", "Microservices Monitoring"]},
         {"category": "SOFT SKILLS", "skills": ["Team Leadership"]}
-      ]
+      ],
+      "personalInterests": ["Book reading", "Stock Trading"]
     },
     {
       "id": "exp-deepcompute-2017", "type": "experience", "heading": "Associate Software Engineer",
@@ -116,7 +117,7 @@
         {"category": "DATABASES", "skills": ["MongoDB", "InfluxDB"]},
         {"category": "SOFT SKILLS", "skills": ["Open-Source Contribution"]
       }],
-      "personalInterests": ["making stickers"]
+      "personalInterests": ["Making stickers"]
     },
     {
       "id": "edu-mit-2013", "type": "education", "heading": "Bachelor of Technology, Computer Science",
@@ -128,7 +129,7 @@
         {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Core Computer Science fundamentals (Data Structures, Algorithms, OS)", "understanding of computer architecture and networking", "Linux kernel basics"]},
         {"category": "SOFT SKILLS", "skills": ["teamwork", "collaboration"]
       }],
-      "personalInterests": ["volleyball"]
+      "personalInterests": ["Volleyball"]
     },
     {
       "id": "edu-dav-2011", "type": "education", "heading": "High School",
@@ -141,7 +142,7 @@
         {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["advanced programming concepts", "mobile operating system fundamentals"]},
         {"category": "SOFT SKILLS", "skills": ["practical troubleshooting", "self-directed learning"]
       }],
-      "personalInterests": ["XDA Developers forums", "football"]
+      "personalInterests": ["XDA Developers forums", "Football"]
     },
     {
       "id": "edu-denobili-2000", "type": "education", "heading": "School",
@@ -152,8 +153,7 @@
       "skillsUsed": [
         {"category": "PROGRAMMING LANGUAGES", "skills": ["introductory Java"]},
         {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Foundational programming logic", "analytical thinking"]
-      }],
-      "personalInterests": ["internet and its underlying mechanisms"]
+      }]
     }
   ]
 }

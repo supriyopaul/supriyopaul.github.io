@@ -27,6 +27,16 @@ def generate_pdf(json_path: str, template_path: str):
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
+    # Flatten skills data for the template
+    if 'timeline' in data:
+        for item in data['timeline']:
+            if 'skillsUsed' in item:
+                all_skills = []
+                for category in item['skillsUsed']:
+                    if 'skills' in category:
+                        all_skills.extend(category['skills'])
+                item['skills'] = all_skills
+
     # Set up Jinja2 environment
     template_dir = os.path.dirname(template_path)
     template_filename = os.path.basename(template_path)
