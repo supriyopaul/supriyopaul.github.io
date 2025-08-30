@@ -10,7 +10,7 @@
         "Aspiring system architect 🏗️",
         "Passionate advocate for clean, maintainable code ✨",
         "Tinkering with applibot.io my latest hobby project! 🤖",
-        "Hobbies include Badminton, Volleyball, watching Anime, and Docuseries 🎬",
+        "Hobbies include Badminton, Coooking, sticker making, watching Anime, and Docuseries 🎬",
         "Favorite authors: Yuval Noah Harari and Paulo Coelho ✍️"
     ],
     "profileImage": "https://media.licdn.com/dms/image/C4D03AQE-e0beIOvnhA/profile-displayphoto-shrink_400_400/0/1651731113597?e=1729728000&v=beta&t=M8-9g0v9F9XQ29V9bJ2W8c9Y3w4J2e8H1v5G3f7k8Xg",
@@ -64,7 +64,7 @@
         "Spearheaded the performance monitoring, scaling, and refinement of Knowledge Graph services, ensuring optimal scalability for Big Data ingestion and retrieval, and enhancing service reliability and efficiency.",
         "Provided mentorship on best practices and maintainability within the AICOE's AI platform, fostering a culture of knowledge sharing and continuous improvement within the team."
       ],
-      "skills": ["System Design & Architecture", "gRPC", "ArangoDB", "Redis", "Kubernetes", "Azure DevOps", "MLOps", "Technical Leadership & Mentorship"],
+      "skills": ["System Design & Architecture", "gRPC", "ArangoDB", "Redis", "Kubernetes", "Azure DevOps", "MLOps", "Technical Leadership & Mentorship", "Knowledge modelling"],
       "certifications": [
         { "name": "AI for Everyone", "issuer": "Coursera", "certificateURL": "https://www.coursera.org/account/accomplishments/certificate/JMQWSQBKDSZC" },
         { "name": "Protocol Buffers", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-1dd3f3c2-d8ad-46b5-9a09-801f26cf0df6/" }
@@ -79,7 +79,7 @@
         "Oversaw and optimized the scalability of ELK and Kafka clusters to accommodate the diverse operational needs across various Jio business units, ensuring seamless data flow and reduced system latency.",
         "Founded and led the Tools & Automation team at Ajio, implementing strategic automation solutions to streamline workflows and eliminate redundant tasks across multiple departments, enhancing overall operational efficiency."
       ],
-      "skills": ["ELK Stack Administration", "Apache Kafka Management", "Prometheus", "Large-Scale Data Architecture", "System Scalability & Performance Tuning", "Ansible", "Microservices Monitoring", "Team Leadership"]
+      "skills": ["ELK Stack Administration", "Apache Kafka Management", "Prometheus", "Large-Scale Data Architecture", "System Scalability & Performance Tuning", "Ansible", "Microservices Monitoring", "Team Leadership", "Grafana", "Kibana", "Dashboarding"]
     },
     {
       "id": "exp-deepcompute-2017", "type": "experience", "heading": "Associate Software Engineer",
@@ -89,7 +89,7 @@
         "Collaborated with cross-functional teams to develop and enhance open-source libraries and modules such as logagg, basescript, deeputil, contributing to the creation of versatile and reusable software components.",
         "Played a pivotal role in application development and facilitated teams in managing deployments and logs, establishing and enforcing stringent benchmarks for code quality to ensure the delivery of robust and efficient software solutions."
       ],
-      "skills": ["Python", "Data Pipelines", "NSQ", "MongoDB", "InfluxDB", "Docker", "CI/CD Pipeline Management", "Bash Scripting", "Git Workflows", "Linux System Administration", "Open-Source Contribution"],
+      "skills": ["Python", "Data Pipelines", "NSQ", "MongoDB", "InfluxDB", "Docker", "CI/CD Pipeline Management", "Bash Scripting", "Git Workflows", "Linux System Administration", "Open-Source Contribution", "OOPS", "Travis CI"],
       "personalInterests": ["making and selling stickers"]
     },
     {
