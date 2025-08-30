@@ -39,7 +39,7 @@
           "type": {
             "type": "string",
             "description": "The type of milestone.",
-            "enum": ["education", "experience", "project", "certification", "personal_interest", "personal_milestone"]
+            "enum": ["education", "experience", "project", "personal_interest", "personal_milestone"]
           },
           "heading": { "type": "string", "description": "The main title for the timeline entry (e.g., 'Software Engineer', 'B.Sc. in Computer Science', 'AWS Certified Developer')." },
           "organization": {
@@ -81,6 +81,21 @@
                 "type": { "type": "string", "enum": ["image", "video", "link"] },
                 "url": { "type": "string", "format": "uri" },
                 "caption": { "type": "string" }
+              }
+            }
+          },
+          "personalInterests": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "certifications": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "issuer": { "type": "string" },
+                "certificateURL": { "type": "string", "format": "uri" }
               }
             }
           },

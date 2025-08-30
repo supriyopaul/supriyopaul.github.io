@@ -19,9 +19,7 @@
       "phone": "+91 8340265344",
       "location": "Whitefield, Bengaluru",
       "linkedin": "https://www.linkedin.com/in/supriyopaul95",
-      "linkedinUser": "supriyopaul95",
       "github": "https://github.com/supriyopaul",
-      "githubUser": "supriyopaul",
       "website": "https://supriyopaul.github.io/"
     }
   },
@@ -29,12 +27,17 @@
     {
       "id": "exp-hm-2024", "type": "experience", "heading": "Software Engineer II",
       "organization": { "name": "H&M", "logoUrl": "https://drive.google.com/file/d/1JZ7aeGCQdHjZKfSsysuU-e6ag0yVFKyk/view?usp=drive_link"}, "role": "Software Engineer II",
-      "startDate": "2024-03-01", "endDate": null, "theme": { "primaryColor": "#E50019" },
+      "startDate": "2024-03-01", "endDate": null,
       "resumePoints": [
         "Developing an integration platform to handle complex business objects to and from PLM software APIs and other in-house applications, making them available in a standardized format for over 10+ downstream systems.",
         "This involves creating a configurable, no-code workflow to streamline and automate the process."
       ],
-      "skills": ["Google Cloud Platform (GCP)", "GKE", "SpannerDB", "Python", "FastAPI", "Enterprise Integration Patterns", "End-to-End SDLC Ownership"],
+      "skillsUsed": [
+        {"category": "DEVOPS & TOOLS", "skills": ["Google Cloud Platform (GCP)", "GKE"]},
+        {"category": "DATABASES", "skills": ["SpannerDB"]},
+        {"category": "PROGRAMMING LANGUAGES", "skills": ["Python"]},
+        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["FastAPI", "Enterprise Integration Patterns", "End-to-End SDLC Ownership"]}
+      ],
       "personalInterests": ["badminton", "anime", "cooking", "Yuval Noah Harari", "Paulo Coelho"]
     },
     {
@@ -43,7 +46,10 @@
         "heading": "applibot.io",
         "startDate": "2023-01-01",
         "endDate": "2024-01-01",
-        "skills": ["RAG Architecture", "LLMs", "LangChain", "Vector Databases", "FastAPI", "Full-Stack Development", "Product Ideation"],
+        "skillsUsed": [
+            {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["RAG Architecture", "LLMs", "LangChain", "Full-Stack Development", "Product Ideation", "FastAPI"]},
+            {"category": "DATABASES", "skills": ["Vector Databases"]}
+        ],
         "certifications": [
             { "name": "Data Structures & Algorithms", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-e7d015c6-9477-45e0-9e0c-8d1863d038f6/"},
             { "name": "System Design", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" },
@@ -58,13 +64,18 @@
     {
       "id": "exp-jio-2021", "type": "experience", "heading": "Software Engineer II",
       "organization": { "name": "Jio Platforms Private Limited", "logoUrl": "https://drive.google.com/file/d/1OLLKlc-sFAXQrqcbv8IqA4tv_JENV-IH/view?usp=drive_link"}, "role": "Software Engineer II",
-      "startDate": "2021-09-01", "endDate": "2024-03-01", "theme": { "primaryColor": "#005EB8" },
+      "startDate": "2021-09-01", "endDate": "2024-03-01",
       "resumePoints": [
         "Engineered a comprehensive Knowledge-graph platform, encompassing micro-services like Schema, Data, and Search, to facilitate the semantic storage and retrieval of domain knowledge, enhancing data accessibility and interoperability.",
         "Spearheaded the performance monitoring, scaling, and refinement of Knowledge Graph services, ensuring optimal scalability for Big Data ingestion and retrieval, and enhancing service reliability and efficiency.",
         "Provided mentorship on best practices and maintainability within the AICOE's AI platform, fostering a culture of knowledge sharing and continuous improvement within the team."
       ],
-      "skills": ["System Design & Architecture", "gRPC", "ArangoDB", "Redis", "Kubernetes", "Azure DevOps", "MLOps", "Technical Leadership & Mentorship", "Knowledge modelling"],
+      "skillsUsed": [
+        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["System Design & Architecture", "gRPC", "Knowledge modelling"]},
+        {"category": "DATABASES", "skills": ["ArangoDB", "Redis"]},
+        {"category": "DEVOPS & TOOLS", "skills": ["Kubernetes", "Azure DevOps", "MLOps"]},
+        {"category": "SOFT SKILLS", "skills": ["Technical Leadership & Mentorship"]}
+      ],
       "certifications": [
         { "name": "AI for Everyone", "issuer": "Coursera", "certificateURL": "https://www.coursera.org/account/accomplishments/certificate/JMQWSQBKDSZC" },
         { "name": "Protocol Buffers", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-1dd3f3c2-d8ad-46b5-9a09-801f26cf0df6/" }
@@ -73,23 +84,33 @@
     {
       "id": "exp-ajio-2019", "type": "experience", "heading": "DevOps Engineer",
       "organization": { "name": "Ajio", "logoUrl": "https://seeklogo.com/images/A/ajio-logo-E5B162A565-seeklogo.com.png"}, "role": "DevOps Engineer",
-      "startDate": "2019-09-01", "endDate": "2021-09-01", "theme": { "primaryColor": "#E42313" },
+      "startDate": "2019-09-01", "endDate": "2021-09-01",
       "resumePoints": [
         "Engineered and deployed multiple robust clusters designed for extensive log aggregation, capable of processing over 7 billion records daily, alongside conducting comprehensive load testing for the in-house cloud infrastructure platform: JAWS.",
         "Oversaw and optimized the scalability of ELK and Kafka clusters to accommodate the diverse operational needs across various Jio business units, ensuring seamless data flow and reduced system latency.",
         "Founded and led the Tools & Automation team at Ajio, implementing strategic automation solutions to streamline workflows and eliminate redundant tasks across multiple departments, enhancing overall operational efficiency."
       ],
-      "skills": ["ELK Stack Administration", "Apache Kafka Management", "Prometheus", "Large-Scale Data Architecture", "System Scalability & Performance Tuning", "Ansible", "Microservices Monitoring", "Team Leadership", "Grafana", "Kibana", "Dashboarding"]
+      "skillsUsed": [
+        {"category": "DEVOPS & TOOLS", "skills": ["ELK Stack Administration", "Apache Kafka Management", "Prometheus", "Ansible", "Grafana", "Kibana", "Dashboarding"]},
+        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Large-Scale Data Architecture", "System Scalability & Performance Tuning", "Microservices Monitoring"]},
+        {"category": "SOFT SKILLS", "skills": ["Team Leadership"]}
+      ]
     },
     {
       "id": "exp-deepcompute-2017", "type": "experience", "heading": "Associate Software Engineer",
       "organization": { "name": "Deepcompute LLC", "logoUrl": "https://drive.google.com/file/d/1eXmg-KJprHRKjKYBEZDCOW4Rs67UvY_5/view?usp=drive_link"}, "role": "Associate Software Engineer",
-      "startDate": "2017-08-01", "endDate": "2019-09-01", "theme": { "primaryColor": "#34495E" },
+      "startDate": "2017-08-01", "endDate": "2019-09-01",
       "resumePoints": [
         "Collaborated with cross-functional teams to develop and enhance open-source libraries and modules such as logagg, basescript, deeputil, contributing to the creation of versatile and reusable software components.",
         "Played a pivotal role in application development and facilitated teams in managing deployments and logs, establishing and enforcing stringent benchmarks for code quality to ensure the delivery of robust and efficient software solutions."
       ],
-      "skills": ["Python", "Data Pipelines", "NSQ", "MongoDB", "InfluxDB", "Docker", "CI/CD Pipeline Management", "Bash Scripting", "Git Workflows", "Linux System Administration", "Open-Source Contribution", "OOPS", "Travis CI"],
+      "skillsUsed": [
+        {"category": "PROGRAMMING LANGUAGES", "skills": ["Python", "Bash Scripting"]},
+        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Data Pipelines", "OOPS"]},
+        {"category": "DEVOPS & TOOLS", "skills": ["NSQ", "Docker", "CI/CD Pipeline Management", "Git Workflows", "Linux System Administration", "Travis CI"]},
+        {"category": "DATABASES", "skills": ["MongoDB", "InfluxDB"]},
+        {"category": "SOFT SKILLS", "skills": ["Open-Source Contribution"]}
+      ],
       "personalInterests": ["making and selling stickers"]
     },
     {
@@ -97,7 +118,10 @@
       "organization": { "name": "Mallabhum Institute of Technology"}, "role": "Undergraduate Student",
       "startDate": "2013-08-01", "endDate": "2017-05-31",
       "resumePoints": [],
-      "skills": ["Core Computer Science fundamentals (Data Structures, Algorithms, OS)", "understanding of computer architecture and networking", "Linux kernel basics", "teamwork", "collaboration"],
+      "skillsUsed": [
+        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Core Computer Science fundamentals (Data Structures, Algorithms, OS)", "understanding of computer architecture and networking", "Linux kernel basics"]},
+        {"category": "SOFT SKILLS", "skills": ["teamwork", "collaboration"]}
+      ],
       "personalInterests": ["volleyball"]
     },
     {
@@ -105,7 +129,11 @@
       "organization": { "name": "D.A.V Public School"}, "role": "Student",
       "startDate": "2011-04-01", "endDate": "2013-03-31",
       "resumePoints": [],
-      "skills": ["C++", "PHP", "advanced programming concepts", "practical troubleshooting", "self-directed learning", "mobile operating system fundamentals"],
+      "skillsUsed": [
+        {"category": "PROGRAMMING LANGUAGES", "skills": ["C++", "PHP"]},
+        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["advanced programming concepts", "mobile operating system fundamentals"]},
+        {"category": "SOFT SKILLS", "skills": ["practical troubleshooting", "self-directed learning"]}
+      ],
       "personalInterests": ["XDA Developers forums", "football"]
     },
     {
@@ -113,7 +141,10 @@
       "organization": { "name": "De Nobili School"}, "role": "Student",
       "startDate": "2000-04-01", "endDate": "2011-03-31",
       "resumePoints": [],
-      "skills": ["Foundational programming logic", "introductory Java", "analytical thinking"],
+      "skillsUsed": [
+        {"category": "PROGRAMMING LANGUAGES", "skills": ["introductory Java"]},
+        {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Foundational programming logic", "analytical thinking"]}
+      ],
       "personalInterests": ["internet and its underlying mechanisms"]
     }
   ]
