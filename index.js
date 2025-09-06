@@ -231,13 +231,13 @@ const handleTheme = (themeName, element) => {
 
 const init = () => {
     const bootSequence = [
-        { text: 'Initializing virtual file system...', delay: 200 },
-        { text: ' [OK]', speed: 20, newline: true },
-        { text: 'Mounting /dev/career/...', delay: 300 },
-        { text: ' [OK]', speed: 20, newline: true },
-        { text: `Compiling ${careerData.personalDetails.fullName}.bin...`, delay: 400 },
-        { text: ' [OK]', speed: 20, newline: true },
-        { text: '\nConnection established. Welcome.\n', delay: 200, speed: 10 },
+        { text: 'Initializing virtual file system...', delay: 50 },
+        { text: ' [OK]', speed: 10, newline: true },
+        { text: 'Mounting /dev/career/...', delay: 50 },
+        { text: ' [OK]', speed: 10, newline: true },
+        { text: `Compiling ${careerData.personalDetails.fullName}.bin...`, delay: 50 },
+        { text: ' [OK]', speed: 10, newline: true },
+        { text: '\nConnection established. Welcome.\n', delay: 50, speed: 5 },
     ];
 
     const banner = `
@@ -269,7 +269,7 @@ Type 'help' to see a list of available commands.
                     outputContainer.appendChild(currentLine);
                 }
                 runSequence(index + 1);
-            }, item.speed || 50);
+            }, item.speed || 20);
         }, item.delay);
     }
     
