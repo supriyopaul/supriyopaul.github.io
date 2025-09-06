@@ -25,7 +25,8 @@
             "github": { "type": "string", "format": "uri" },
             "website": { "type": "string", "format": "uri" }
           }
-        }
+        },
+        "downloadLink": { "type": "string", "format": "uri", "description": "URL to a downloadable PDF version of the resume." }
       },
       "required": ["fullName", "currentTitle"]
     },
