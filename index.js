@@ -25,7 +25,7 @@ const careerData = {
   },
   "timeline": [
     { "id": "exp-hm-2024", "type": "experience", "heading": "Software Engineer II", "organization": { "name": "H&M" }, "role": "Software Engineer II", "startDate": "2024-03-01", "endDate": null, "narrative": "Using `applibot`, I secured my current role at H&M. I work on the central Hub, a platform that acts as a **configurable, low-code workflow** for handling data integrations between our \"Centric\" PLM system and **over 10+ downstream systems**. My responsibilities include owning multiple business objects, overseeing their integrations, and maintaining our core modules and ETL pipelines on **Google Cloud Platform (GCP)**, using services like **Cloud Run, GKE, and SpannerDB**. I am deeply involved in the entire SDLC, from solution design to production support. Outside of my technical responsibilities, I'm an active part of the company culture and a keen **badminton** player, having won several internal tournaments.", "resumePoints": [ "Developing an integration platform to handle complex business objects to and from PLM software APIs and other in-house applications, making them available in a standardized format for over 10+ downstream systems.", "This involves creating a configurable, no-code workflow to streamline and automate the process." ], "skillsUsed": [ {"category": "DEVOPS & TOOLS", "skills": ["Google Cloud Platform (GCP)", "GKE"]}, {"category": "DATABASES", "skills": ["SpannerDB"]}, {"category": "PROGRAMMING LANGUAGES", "skills": ["Python"]}, {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["PLM systems", "Enterprise Integration Patterns", "End-to-End SDLC Ownership"]} ], "personalInterests": ["Badminton"] },
-    { "id": "project-applibot-2023", "type": "project", "heading": "applibot.io", "startDate": "2023-01-01", "endDate": "2024-01-01", "narrative": "To continuously sharpen my foundational skills, I dedicated time to competitive programming. To prepare, I took a dedicated course on **Data Structures & Algorithms** and also completed a comprehensive **[System Design certification](https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/)**. This preparation culminated in a **[50-day challenge on LeetCode](https://drive.google.com/file/d/1zZOSrQ-3x5oreK_nLA0wplgx-I7muvmc/view?usp=sharing)**, where I earned a badge awarded to the **top 6.9% of global participants**.\n\nFueled by my experience across diverse teams and my ambition as an **aspiring system architect**, I sought a role with greater end-to-end ownership. To aid my job search, I built **`applibot.io`**, a **RAG application** to automate job applications. The tech stack included **LanceDB**, **PostgreSQL**, **FastAPI**, and I leveraged **LangChain** alongside OpenAI models as the primary LLM framework.", "skillsUsed": [ {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["RAG Architecture", "LLMs", "LangChain", "Full-Stack Development", "Product Ideation", "FastAPI"]}, {"category": "DATABASES", "skills": ["Vector Databases"]} ], "certifications": [ { "name": "Data Structures & Algorithms", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-e7d015c6-9477-45e0-9e0c-8d1863d038f6/"}, { "name": "System Design", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" }, { "name": "Top 6.9% Badge 2022", "issuer": "LeetCode", "certificateURL": "https://drive.google.com/file/d/1zZOSrQ-3x5oreK_nLA0wplgx-I7muvmc/view?usp=sharing" } ], "personalInterests": ["Anime", "Cooking"], "resumePoints": [ "Built a RAG application to automate job applications, leveraging LanceDB, PostgreSQL, and FastAPI.", "Utilized LangChain and OpenAI models as the primary LLM framework." ] },
+    { "id": "project-applibot-2023", "type": "project", "heading": "applibot.io", "organization": { "name": "Personal Project" }, "startDate": "2023-01-01", "endDate": "2024-01-01", "narrative": "To continuously sharpen my foundational skills, I dedicated time to competitive programming. To prepare, I took a dedicated course on **Data Structures & Algorithms** and also completed a comprehensive **[System Design certification](https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/)**. This preparation culminated in a **[50-day challenge on LeetCode](https://drive.google.com/file/d/1zZOSrQ-3x5oreK_nLA0wplgx-I7muvmc/view?usp=sharing)**, where I earned a badge awarded to the **top 6.9% of global participants**.\n\nFueled by my experience across diverse teams and my ambition as an **aspiring system architect**, I sought a role with greater end-to-end ownership. To aid my job search, I built **`applibot.io`**, a **RAG application** to automate job applications. The tech stack included **LanceDB**, **PostgreSQL**, **FastAPI**, and I leveraged **LangChain** alongside OpenAI models as the primary LLM framework.", "skillsUsed": [ {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["RAG Architecture", "LLMs", "LangChain", "Full-Stack Development", "Product Ideation", "FastAPI"]}, {"category": "DATABASES", "skills": ["Vector Databases"]} ], "certifications": [ { "name": "Data Structures & Algorithms", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-e7d015c6-9477-45e0-9e0c-8d1863d038f6/"}, { "name": "System Design", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" }, { "name": "Top 6.9% Badge 2022", "issuer": "LeetCode", "certificateURL": "https://drive.google.com/file/d/1zZOSrQ-3x5oreK_nLA0wplgx-I7muvmc/view?usp=sharing" } ], "personalInterests": ["Anime", "Cooking"], "resumePoints": [ "Built a RAG application to automate job applications, leveraging LanceDB, PostgreSQL, and FastAPI.", "Utilized LangChain and OpenAI models as the primary LLM framework." ] },
     { "id": "exp-jio-2021", "type": "experience", "heading": "Software Engineer II", "organization": { "name": "Jio Platforms Private Limited" }, "role": "Software Engineer II", "startDate": "2021-09-01", "endDate": "2024-03-01", "narrative": "I transitioned to the AI-Center of Excellence (AI-COE) team at Jio. The team's vision was to build a unified **ML and MLOps platform** to standardize pipelines for data ingestion, model training, and inference. To ground myself in the team's domain upon joining, I completed the **[AI for Everyone](https://www.coursera.org/account/accomplishments/certificate/JMQWSQBKDSZC)** course.\n\nMy primary contribution was engineering a comprehensive **Knowledge Graph platform** built on **ArangoDB**, using **Redis** for caching to enhance query performance. The platform's microservices architecture was built on **gRPC and Protocol Buffers**, for which I earned a specialized **[certification](https://www.udemy.com/certificate/UC-1dd3f3c2-d8ad-46b5-9a09-801f26cf0df6/)**. As the team grew, my role evolved to include mentoring and training new members. Beyond leadership, I also **spearheaded the performance monitoring, scaling, and refinement of our Knowledge Graph services**, ensuring high reliability and efficiency. The entire platform was deployed on **Kubernetes** using CI/CD pipelines I built on **Azure DevOps**.", "resumePoints": [ "Engineered a comprehensive Knowledge-graph platform, encompassing micro-services like Schema, Data, and Search, to facilitate the semantic storage and retrieval of domain knowledge, enhancing data accessibility and interoperability.", "Spearheaded the performance monitoring, scaling, and refinement of Knowledge Graph services, ensuring optimal scalability for Big Data ingestion and retrieval, and enhancing service reliability and efficiency.", "Provided mentorship on best practices and maintainability within the AICOE's AI platform, fostering a culture of knowledge sharing and continuous improvement within the team." ], "skillsUsed": [ {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["System Design & Architecture", "gRPC", "Knowledge modelling"]}, {"category": "DATABASES", "skills": ["ArangoDB", "Redis"]}, {"category": "DEVOPS & TOOLS", "skills": ["Kubernetes", "Azure DevOps", "MLOps"]}, {"category": "SOFT SKILLS", "skills": ["Technical Leadership & Mentorship"]} ], "certifications": [ { "name": "AI for Everyone", "issuer": "Coursera", "certificateURL": "https://www.coursera.org/account/accomplishments/certificate/JMQWSQBKDSZC" }, { "name": "Protocol Buffers", "issuer": "Udemy", "certificateURL": "https://www.udemy.com/certificate/UC-1dd3f3c2-d8ad-46b5-9a09-801f26cf0df6/" } ] },
     { "id": "exp-ajio-2019", "type": "experience", "heading": "DevOps Engineer", "organization": { "name": "Ajio" }, "role": "DevOps Engineer", "startDate": "2019-09-01", "endDate": "2021-09-01", "narrative": "I moved to Ajio, where I **founded and led the Tools & Automation team**. My mission was to implement strategic automation solutions that would streamline workflows and eliminate redundant tasks across the organization. This was a critical period, as Ajio was undergoing a massive migration to a microservices architecture.\n\nBefore building the large-scale ELK pipeline, my initial focus was on operational stability, where I implemented **Prometheus** for monitoring and alerting on ad-hoc internal tasks. My team's flagship project became a **centralized visibility platform** built on **ELK and Kafka clusters**, designed to pinpoint performance bottlenecks in real-time. We scaled this platform to support over **16 microservices**, processing over **7 billion log records daily**. I was responsible for the architecture, scalability, and optimization of these clusters, as well as leading the infrastructure benchmarking for migration to Jio's in-house cloud, \"JAWS\". All deployments and configuration changes were managed using **Ansible**.", "resumePoints": [ "Engineered and deployed multiple robust clusters designed for extensive log aggregation, capable of processing over 7 billion records daily, alongside conducting comprehensive load testing for the in-house cloud infrastructure platform: JAWS.", "Oversaw and optimized the scalability of ELK and Kafka clusters to accommodate the diverse operational needs across various Jio business units, ensuring seamless data flow and reduced system latency.", "Founded and led the Tools & Automation team at Ajio, implementing strategic automation solutions to streamline workflows and eliminate redundant tasks across multiple departments, enhancing overall operational efficiency." ], "skillsUsed": [ {"category": "DEVOPS & TOOLS", "skills": ["ELK Stack Administration", "Apache Kafka Management", "Prometheus", "Ansible", "Grafana", "Kibana", "Dashboarding"]}, {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Large-Scale Data Architecture", "System Scalability & Performance Tuning", "Microservices Monitoring"]}, {"category": "SOFT SKILLS", "skills": ["Team Leadership"]} ], "personalInterests": ["Book reading", "Stock Trading"] },
     { "id": "exp-deepcompute-2017", "type": "experience", "heading": "Associate Software Engineer", "organization": { "name": "Deepcompute LLC" }, "role": "Associate Software Engineer", "startDate": "2017-08-01", "endDate": "2019-09-01", "narrative": "My professional career began at **Deepcompute**, a dynamic startup that served as the primary technology backend for nference. Nference's platform was designed to accelerate **drug discovery and development by analyzing and organizing vast datasets** scraped from medical literature, Wikipedia, FDA databases, and clinical trials. For its clients, including major pharmaceutical corporations like Johnson & Johnson, Pfizer, and Merck, the platform produced powerful insights through tools like **gene-drug relationship heatmaps and trend analysis charts**.\n\nIn this role, I transitioned from Java to **Python** and was tasked with building and supporting critical internal tools. I actively **collaborated with cross-functional teams to develop and enhance several open-source libraries** and modules like `logagg`, `basescript`, and `deeputil`. My primary responsibilities revolved around the data pipeline, which involved ingesting large volumes of JSON data and administering the supporting infrastructure, including **MongoDB**, **InfluxDB**, and **NSQ**.\n\nBeyond tool development, I played a pivotal role in shaping our engineering practices by facilitating deployments using **Docker and Travis CI**. This role solidified my belief in robust engineering; I became a **passionate advocate for clean, maintainable code**, especially after implementing CI/CD checks and using tools like `doctest` to enforce quality and documentation simultaneously. After my first year, I also briefly ventured into creative design, making and selling stickers.", "resumePoints": [ "Collaborated with cross-functional teams to develop and enhance open-source libraries and modules such as logagg, basescript, deeputil, contributing to the creation of versatile and reusable software components.", "Played a pivotal role in application development and facilitated teams in managing deployments and logs, establishing and enforcing stringent benchmarks for code quality to ensure the delivery of robust and efficient software solutions." ], "skillsUsed": [ {"category": "PROGRAMMING LANGUAGES", "skills": ["Python", "Bash Scripting"]}, {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["Data Pipelines", "OOPS"]}, {"category": "DEVOPS & TOOLS", "skills": ["NSQ", "Docker", "CI/CD Pipeline Management", "Git Workflows", "Linux System Administration", "Travis CI"]}, {"category": "DATABASES", "skills": ["MongoDB", "InfluxDB"]}, {"category": "SOFT SKILLS", "skills": ["Open-Source Contribution"]} ], "personalInterests": ["Making stickers"] },
@@ -148,10 +148,17 @@ const appendOutput = (content) => {
 };
 
 const processCommand = (command) => {
+    const trimmedCommand = command.trim().toLowerCase();
     const [cmd, ...args] = command.trim().split(' ');
     const commandOutputDiv = document.createElement('div');
     commandOutputDiv.classList.add('command-output');
     outputContainer.appendChild(commandOutputDiv);
+
+    // Handle multi-word commands
+    if (trimmedCommand === 'hobby projects' || trimmedCommand === 'hobby-projects') {
+        handleTimeline('project', commandOutputDiv);
+        return;
+    }
 
     switch (cmd.toLowerCase()) {
         case 'help':
@@ -162,11 +169,21 @@ const processCommand = (command) => {
             break;
         case 'experience':
         case 'projects':
+        case 'hobby':
+        case 'hobbies':
         case 'education':
-            handleTimeline(cmd.toLowerCase(), commandOutputDiv);
+            let type = cmd.toLowerCase();
+            if (type === 'projects' || type === 'hobby' || type === 'hobbies') {
+                type = 'project';
+            }
+            handleTimeline(type, commandOutputDiv);
             break;
         case 'skills':
             handleSkills(commandOutputDiv);
+            break;
+        case 'certifications':
+        case 'certs':
+            handleCertifications(commandOutputDiv);
             break;
         case 'contact':
             handleContact(commandOutputDiv);
@@ -196,9 +213,10 @@ const handleHelp = (element) => {
     const helpText = `<span class="section-header">Available Commands</span>
   <span class="accent">about</span>        - Professional summary and core competencies
   <span class="accent">experience</span>   - Work history and career progression
-  <span class="accent">projects</span>     - Portfolio of personal and professional projects
+  <span class="accent">hobby projects</span> - Portfolio of hobby projects and personal initiatives
   <span class="accent">education</span>    - Academic background and qualifications
   <span class="accent">skills</span>       - Technical expertise organized by category
+  <span class="accent">certifications</span> - Professional certifications and achievements
   <span class="accent">contact</span>      - Professional contact information and social profiles
   <span class="accent">resume</span>       - Download comprehensive CV (PDF format)
   <span class="accent">cat &lt;id&gt;</span>     - Detailed view of specific entry (e.g., 'cat <span class="highlight">exp-hm-2024</span>')
@@ -248,6 +266,38 @@ const handleSkills = (element) => {
     typewriter(output, element, null, 5);
 };
 
+const handleCertifications = (element) => {
+    const allCertifications = [];
+    careerData.timeline.forEach(item => {
+        if (item.certifications && item.certifications.length > 0) {
+            item.certifications.forEach(cert => {
+                allCertifications.push({
+                    ...cert,
+                    context: item.heading,
+                    organization: item.organization.name,
+                    year: new Date(item.startDate).getFullYear()
+                });
+            });
+        }
+    });
+
+    let output = '<span class="muted">Compiling professional certifications and achievements...</span>\n\n';
+    
+    if (allCertifications.length > 0) {
+        output += '<span class="section-header">Professional Certifications</span>\n\n';
+        allCertifications.forEach(cert => {
+            output += `<span class="accent">▸</span> <span class="highlight">${cert.name}</span>\n`;
+            output += `  <span class="muted">Issuer:</span> <span class="secondary">${cert.issuer}</span>\n`;
+            output += `  <span class="muted">Context:</span> <span class="skill-item">${cert.context} @ ${cert.organization}</span>\n`;
+            output += `  <span class="muted">Certificate:</span> <a href="${cert.certificateURL}" target="_blank">View Certificate</a>\n\n`;
+        });
+    } else {
+        output += '<span class="muted">No certifications found in the timeline.</span>\n';
+    }
+    
+    fastTypewriter(output, element);
+};
+
 const handleContact = (element) => {
     const c = careerData.personalDetails.contact;
     const contactText = `<span class="section-header">Contact Information</span>
@@ -286,7 +336,18 @@ const handleCat = (id, element) => {
     }
     
     let output = `<span class="muted">> Loading profile:</span> <span class="highlight">${id}</span><span class="muted">...</span>\n\n`;
-    output += `[ <span class="section-header">POSITION</span> ] <span class="accent">${item.heading}</span> <span class="muted">@</span> <span class="secondary">${item.organization.name}</span>\n`;
+    
+    // Use different labels based on the type
+    let headingLabel = '';
+    if (item.type === 'experience') {
+        headingLabel = 'POSITION';
+    } else if (item.type === 'education') {
+        headingLabel = 'PROGRAM';
+    } else if (item.type === 'project') {
+        headingLabel = 'PROJECT';
+    }
+    
+    output += `[ <span class="section-header">${headingLabel}</span> ] <span class="accent">${item.heading}</span> <span class="muted">@</span> <span class="secondary">${item.organization.name}</span>\n`;
     const endDate = item.endDate ? new Date(item.endDate).toLocaleDateString() : 'Present';
     output += `[ <span class="section-header">DURATION</span> ] <span class="timeline-date">${new Date(item.startDate).toLocaleDateString()} - ${endDate}</span>\n`;
     output += `<span class="divider">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>\n`;
@@ -304,7 +365,11 @@ const handleCat = (id, element) => {
         output += `\n`;
     }
      if(item.certifications && item.certifications.length > 0) {
-        output += `[ <span class="section-header">CERTIFICATIONS</span> ]\n${item.certifications.map(c => `<span class="accent">•</span> <span class="secondary">${c.name}</span> - <a href="${c.certificateURL}" target="_blank">View Certificate</a>`).join('\n')}\n\n`;
+        output += `[ <span class="section-header">CERTIFICATIONS</span> ]\n`;
+        item.certifications.forEach(c => {
+            output += `<span class="accent">•</span> <span class="secondary">${c.name}</span> <span class="muted">by</span> <span class="skill-item">${c.issuer}</span> - <a href="${c.certificateURL}" target="_blank">View Certificate</a>\n`;
+        });
+        output += `\n`;
     }
     
     typewriter(output, element, null, 5);
