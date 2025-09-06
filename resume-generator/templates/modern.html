@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ personalDetails.fullName }}'s Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+        body { font-family: 'Lato', sans-serif; font-size: 9.5pt; color: #333; margin: 0; background-color: #f9f9f9; }
+        .container { display: flex; max-width: 8.5in; min-height: 11in; margin: auto; background-color: white; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        .sidebar { width: 35%; background-color: #f2f2f2; padding: 25px; }
+        .main-content { width: 65%; padding: 25px; }
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 15px; }
+        .sidebar h2, .main-content h2 { font-size: 13pt; color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 20px; margin-bottom: 15px; text-transform: uppercase; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 10px; font-size: 9pt; }
+        .contact-item svg { width: 14px; height: 14px; margin-right: 10px; fill: #2c3e50; }
+        .contact-item a { color: #333; text-decoration: none; word-break: break-all; }
+        .education-item { margin-bottom: 12px; }
+        .education-item strong { display: block; font-size: 10pt; }
+        .education-item span { color: #555; }
+        .cert-item a { color: #333; text-decoration: none; }
+        .main-header { text-align: left; margin-bottom: 20px; }
+        .main-header h1 { font-size: 28pt; margin: 0; color: #2c3e50; }
+        .main-header .title { font-size: 12pt; color: #7f8c8d; margin-top: 2px; }
+        .summary-list { list-style-type: none; padding-left: 0; }
+        .summary-list li { margin-bottom: 5px; }
+        .job { margin-bottom: 18px; }
+        .job-header { margin-bottom: 5px; }
+        .job-title { font-size: 11pt; font-weight: 700; }
+        .job-org-dates { font-size: 9pt; color: #555; }
+        .job-points { padding-left: 18px; margin-top: 8px; }
+        .job-points li { margin-bottom: 6px; line-height: 1.4; }
+        /* Dynamic color for job titles based on JSON theme */
+        {% for item in timeline if item.type == 'experience' and item.theme %}
+        .job-{{ item.id }} .job-title { color: {{ item.theme.primaryColor }}; }
+        {% endfor %}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="{{ personalDetails.profileImage }}" alt="Profile Photo" class="profile-img">
+            <h2>Contact</h2>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5l8-5V8z"/></svg>
+                <a href="mailto:{{ personalDetails.contact.email }}">{{ personalDetails.contact.email }}</a>
+            </div>
+            <div class="contact-item">
+                 <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5c0.55,0 1,0.45 1,1v3.5c0,0.55 -0.45,1 -1,1c-9.39,0 -17,-7.61 -17,-17c0,-0.55 0.45,-1 1,-1h3.5c0.55,0 1,0.45 1,1c0,1.25 0.2,2.45 0.57,3.57c0.11,0.35 0.03,0.74 -0.25,1.02L6.62,10.79z"/></svg>
+                <span>{{ personalDetails.contact.phone }}</span>
+            </div>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.21 2 5 5.21 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.79-3.21-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>{{ personalDetails.contact.location }}</span>
+            </div>
+            <div class="contact-item">
+                 <svg viewBox="0 0 24 24"><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M8.5,18H6v-7h2.5V18z M7.25,9.75 c-0.97,0-1.75-0.78-1.75-1.75s0.78-1.75,1.75-1.75s1.75,0.78,1.75,1.75S8.22,9.75,7.25,9.75z M18,18h-2.5v-3.5 c0,-0.84-0.02,-1.92-1.17,-1.92c-1.17,0-1.35,0.91-1.35,1.86V18h-2.5v-7H13v1.17h0.02c0.35-0.66,1.22-1.36,2.48-1.36 c2.65,0,3.14,1.74,3.14,4V18z"/></svg>
+                 <a href="{{ personalDetails.contact.linkedin }}">{{ personalDetails.contact.linkedinUser }}</a>
+            </div>
+            <div class="contact-item">
+                 <svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-1.1.1-.9.1-.9 1.1.1 1.7 1.1 1.7 1.1.9 1.6 2.4 1.2 3 .9.1-.7.4-1.2.7-1.4-2.3-.3-4.7-1.2-4.7-5.1 0-1.1.4-2 1-2.8-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.9 1.1.8-.2 1.7-.3 2.5-.3s1.7.1 2.5.3c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.8 0 3.9-2.4 4.8-4.7 5.1.4.3.8.9.8 1.8v2.7c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+                <a href="{{ personalDetails.contact.github }}">{{ personalDetails.contact.githubUser }}</a>
+            </div>
+
+            <h2>Education</h2>
+            {% for item in timeline if item.type == 'education' %}
+            <div class="education-item">
+                <strong>{{ item.heading }}</strong>
+                <span>{{ item.organization.name }}</span><br>
+                <span>{{ item.startDate.split('-')[0] }} - {{ item.endDate.split('-')[0] }}</span>
+            </div>
+            {% endfor %}
+
+            <h2>Certificates</h2>
+            {% for cert in certifications %}
+            <div class="education-item cert-item">
+                <strong><a href="{{ cert.certificateURL }}">{{ cert.name }}</a></strong>
+                <span>{{ cert.issuer }}</span>
+            </div>
+            {% endfor %}
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>{{ personalDetails.fullName }}</h1>
+                <div class="title">{{ personalDetails.currentTitle }}</div>
+            </header>
+
+            <section>
+                <h2>Summary</h2>
+                <ul class="summary-list">
+                    {% for point in personalDetails.summaryPoints %}
+                    <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section>
+                <h2>Experience</h2>
+                 {% for item in timeline if item.type == 'experience' %}
+                <div class="job job-{{ item.id }}">
+                    <div class="job-header">
+                        <div class="job-title">{{ item.heading }}</div>
+                        <div class="job-org-dates">
+                            {{ item.organization.name }} | {{ item.startDate.split('-')[0] }}.{{ item.startDate.split('-')[1] }} - {{ 'Present' if not item.endDate else item.endDate.split('-')[0] + '.' + item.endDate.split('-')[1] }}
+                        </div>
+                    </div>
+                    <ul class="job-points">
+                        {% for point in item.resumePoints %}
+                        <li>{{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </section>
+
+             <section>
+                <h2>Skills</h2>
+                 {% for category in skillsSummary %}
+                    <p><strong>{{ category.category }}:</strong> {{ category.skills | join(', ') }}</p>
+                 {% endfor %}
+            </section>
+        </main>
+    </div>
+</body>
+</html>

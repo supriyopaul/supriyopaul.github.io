@@ -1,15 +1,24 @@
-<html> 
-  <head> 
-    <title>Supriyo Paul</title> 
-    <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <link rel="icon" href="dp.jpeg" sizes="16x16" type="image/png">
-    <link rel="stylesheet" type="text/css" href="index.css">
-  </head> 
-  <body> 
-    <script type="text/javascript" src="index.js"> 
-    </script> 
-    <div id="console"></div> 
-    <script type="text/javascript", src="index2.js">
-    </script>
-  </body> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supriyo Paul - Career Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="terminal">
+        <div id="output-container"></div>
+        <div class="input-line">
+            <span class="prompt">guest@supriyo.dev:~$</span>
+            <input type="text" id="command-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <span class="cursor"></span>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
 </html>

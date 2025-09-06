@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "title": "ProfessionalJourney",
+  "description": "A comprehensive schema to store a personal and professional narrative, with a focus on a chronological timeline.",
+  "type": "object",
+  "properties": {
+    "personalDetails": {
+      "type": "object",
+      "properties": {
+        "fullName": { "type": "string", "description": "Full legal name." },
+        "currentTitle": { "type": "string", "description": "The current professional title (e.g., 'Senior Software Engineer at Google')." },
+        "brandingStatements": {
+          "type": "array",
+          "description": "Short, powerful statements for summaries (e.g., 'Aspiring system architect').",
+          "items": { "type": "string" }
+        },
+        "profileImage": { "type": "string", "format": "uri", "description": "URL for a professional headshot or profile image." },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "email": { "type": "string", "format": "email" },
+            "phone": { "type": "string" },
+            "location": { "type": "string" },
+            "linkedin": { "type": "string", "format": "uri" },
+            "github": { "type": "string", "format": "uri" },
+            "website": { "type": "string", "format": "uri" }
+          }
+        },
+        "downloadLink": { "type": "string", "format": "uri", "description": "URL to a downloadable PDF version of the resume." }
+      },
+      "required": ["fullName", "currentTitle"]
+    },
+    "timeline": {
+      "type": "array",
+      "description": "A chronological list of all professional and personal milestones.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "A unique identifier for this timeline entry."},
+          "type": {
+            "type": "string",
+            "description": "The type of milestone.",
+            "enum": ["education", "experience", "project", "personal_interest", "personal_milestone"]
+          },
+          "heading": { "type": "string", "description": "The main title for the timeline entry (e.g., 'Software Engineer', 'B.Sc. in Computer Science', 'AWS Certified Developer')." },
+          "organization": {
+            "type": "object",
+            "description": "The associated company, university, or issuing body.",
+            "properties": {
+              "name": { "type": "string" },
+              "logoUrl": { "type": "string", "format": "uri", "description": "URL for the company/school logo." }
+            }
+          },
+          "role": { "type": "string", "description": "Your official title or role (most relevant for 'experience' type)." },
+          "location": { "type": "string" },
+          "startDate": { "type": "string", "format": "date" },
+          "endDate": { "type": ["string", "null"], "format": "date" },
+          "narrative": { "type": "string", "description": "The full, rich story for your portfolio website. Supports Markdown." },
+          "resumePoints": {
+            "type": "array",
+            "description": "Concise bullet points suitable for a one-page resume.",
+            "items": { "type": "string" }
+          },
+          "skillsUsed": {
+            "type": "array",
+            "description": "Key skills applied or learned during this period. This data can be aggregated to auto-generate a skills summary.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "category": { "type": "string", "description": "e.g., 'Languages', 'Databases', 'DevOps Tools'." },
+                "skills": { "type": "array", "items": { "type": "string" } }
+              },
+              "required": ["category", "skills"]
+            }
+          },
+          "media": {
+            "type": "array",
+            "description": "Associated images, videos, or documents.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": { "type": "string", "enum": ["image", "video", "link"] },
+                "url": { "type": "string", "format": "uri" },
+                "caption": { "type": "string" }
+              }
+            }
+          },
+          "personalInterests": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "certifications": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "issuer": { "type": "string" },
+                "certificateURL": { "type": "string", "format": "uri" }
+              }
+            }
+          },
+          "certificateURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "Link to the certificate or credential (most relevant for 'certification' type)."
+          }
+        },
+        "required": ["id", "type", "heading", "startDate"]
+      }
+    }
+  },
+  "required": ["personalDetails", "timeline"]
+}

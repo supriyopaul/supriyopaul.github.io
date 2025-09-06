@@ -1,0 +1,22 @@
+# IDE and OS files
+.DS_Store
+.idea/
+*.suo
+*.user
+*.sln
+
+# Python
+venv/
+*.pyc
+__pycache__/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# PDF files
+*.pdf
