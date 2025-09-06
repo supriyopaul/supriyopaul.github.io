@@ -42,6 +42,66 @@ const commandInput = document.getElementById('command-input');
 let commandHistory = [];
 let historyIndex = -1;
 
+// Prevent throttling when page is not visible
+let isPageVisible = true;
+document.addEventListener('visibilitychange', () => {
+    isPageVisible = !document.hidden;
+});
+
+// Enhanced requestAnimationFrame that works even when page is not visible
+const enhancedRAF = (callback) => {
+    if (isPageVisible) {
+        requestAnimationFrame(callback);
+    } else {
+        // Use setTimeout as fallback when page is hidden
+        setTimeout(callback, 16); // ~60fps
+    }
+};
+
+// Fast typewriter for help and other quick commands
+const fastTypewriter = (text, element, callback, speed = 5) => {
+    let i = 0;
+    element.innerHTML = '';
+    
+    const typeChunk = () => {
+        // Process multiple characters at once for speed
+        const chunkSize = 3;
+        let processed = 0;
+        
+        while (i < text.length && processed < chunkSize) {
+            let char = text.charAt(i);
+            
+            // Handle HTML tags or entities
+            if (char === '<' || char === '&') {
+                const endIndex = text.indexOf(char === '<' ? '>' : ';', i);
+                if (endIndex !== -1) {
+                    element.innerHTML += text.substring(i, endIndex + 1);
+                    i = endIndex;
+                } else {
+                    element.innerHTML += char;
+                }
+            } else {
+                element.innerHTML += char;
+            }
+            
+            i++;
+            processed++;
+        }
+        
+        terminal.scrollTop = terminal.scrollHeight;
+        
+        if (i < text.length) {
+            setTimeout(() => {
+                enhancedRAF(typeChunk);
+            }, speed);
+        } else {
+            if (callback) callback();
+        }
+    };
+    
+    enhancedRAF(typeChunk);
+};
+
 const typewriter = (text, element, callback, speed = 20) => {
     let i = 0;
     element.innerHTML = '';
@@ -64,12 +124,20 @@ const typewriter = (text, element, callback, speed = 20) => {
             
             i++;
             terminal.scrollTop = terminal.scrollHeight;
-            setTimeout(type, speed);
-        } else {
-            if (callback) callback();
+            
+            // Use requestAnimationFrame for better performance and continued execution
+            if (i < text.length) {
+                setTimeout(() => {
+                    enhancedRAF(type);
+                }, speed);
+            } else {
+                if (callback) callback();
+            }
         }
     };
-    type();
+    
+    // Start with requestAnimationFrame for immediate execution
+    enhancedRAF(type);
 };
 
 const appendOutput = (content) => {
@@ -126,17 +194,17 @@ const processCommand = (command) => {
 
 const handleHelp = (element) => {
     const helpText = `Available commands:
-  <span class="success">about</span>        - Display a brief summary about me.
-  <span class="success">experience</span>   - List my professional experience.
-  <span class="success">projects</span>     - Show my personal and professional projects.
-  <span class="success">education</span>    - Detail my educational background.
-  <span class="success">skills</span>       - List my technical skills, grouped by category.
-  <span class="success">contact</span>      - Show my contact information and social links.
-  <span class="success">resume</span>       - Download my latest resume.
-  <span class="success">cat &lt;id&gt;</span>     - Display detailed information (e.g., 'cat exp-hm-2024').
-  <span class="success">theme &lt;name&gt;</span> - Change theme (dracula, hacker, solarized-light).
-  <span class="success">clear</span>        - Clear the terminal screen.`;
-    typewriter(helpText, element);
+  <span class="success">about</span>        - Professional summary and core competencies
+  <span class="success">experience</span>   - Work history and career progression
+  <span class="success">projects</span>     - Portfolio of personal and professional projects
+  <span class="success">education</span>    - Academic background and qualifications
+  <span class="success">skills</span>       - Technical expertise organized by category
+  <span class="success">contact</span>      - Professional contact information and social profiles
+  <span class="success">resume</span>       - Download comprehensive CV (PDF format)
+  <span class="success">cat &lt;id&gt;</span>     - Detailed view of specific entry (e.g., 'cat exp-hm-2024')
+  <span class="success">theme &lt;name&gt;</span> - Switch interface theme (dracula, hacker, solarized-light)
+  <span class="success">clear</span>        - Clear terminal output`;
+    fastTypewriter(helpText, element);
 };
 
 const handleAbout = (element) => {
@@ -154,8 +222,8 @@ const handleTimeline = (type, element) => {
         const heading = `${item.heading} @ ${item.organization.name}`;
         output += `${id}${dates}${heading}\n`;
     });
-    output += `\nTo see details, type 'cat &lt;id&gt;', e.g., 'cat ${careerData.timeline.find(item => item.type === type).id}'`;
-    typewriter(output, element);
+    output += `\nFor detailed information, use 'cat &lt;id&gt;' (example: 'cat ${careerData.timeline.find(item => item.type === type).id}')`;
+    fastTypewriter(output, element);
 };
 
 const handleSkills = (element) => {
@@ -171,10 +239,10 @@ const handleSkills = (element) => {
         }
     });
 
-    let output = 'Aggregating skills across all experiences...\n\n';
+    let output = 'Compiling technical expertise across all roles...\n\n';
     for (const category in skillsByCategory) {
-        output += `&gt;&gt; <span class="success">${category.toUpperCase()}</span>\n`;
-        output += `   ${Array.from(skillsByCategory[category]).join(', ')}\n\n`;
+        output += `▸ <span class="success">${category.toUpperCase()}</span>\n`;
+        output += `  ${Array.from(skillsByCategory[category]).join(' • ')}\n\n`;
     }
     typewriter(output, element, null, 5);
 };
@@ -186,19 +254,19 @@ Phone:    ${c.phone}
 LinkedIn: <a href="${c.linkedin}" target="_blank">${c.linkedin}</a>
 GitHub:   <a href="${c.github}" target="_blank">${c.github}</a>
 Website:  <a href="${c.website}" target="_blank">${c.website}</a>`;
-    typewriter(contactText, element);
+    fastTypewriter(contactText, element);
 };
 
 const handleResume = (element) => {
     const downloadLink = careerData.personalDetails.downloadLink;
-    const resumeText = `Opening resume download...
+    const resumeText = `Initiating resume download...
     
-<span class="success">📄 Resume Download</span>
-<a href="${downloadLink}" target="_blank" download>Click here to download my latest resume (PDF)</a>
+<span class="success">📄 Comprehensive CV</span>
+<a href="${downloadLink}" target="_blank" download>Download latest resume (PDF format)</a>
 
-Or copy this link: ${downloadLink}`;
+Direct link: ${downloadLink}`;
     
-    typewriter(resumeText, element, () => {
+    fastTypewriter(resumeText, element, () => {
         // Automatically open the download link
         window.open(downloadLink, '_blank');
     });
@@ -215,26 +283,26 @@ const handleCat = (id, element) => {
         return;
     }
     
-    let output = `> Executing 'cat ${id}'...\n\n`;
-    output += `[ <span class="success">HEADING</span> ] ${item.heading} @ ${item.organization.name}\n`;
+    let output = `> Loading profile: ${id}...\n\n`;
+    output += `[ <span class="success">POSITION</span> ] ${item.heading} @ ${item.organization.name}\n`;
     const endDate = item.endDate ? new Date(item.endDate).toLocaleDateString() : 'Present';
-    output += `[ <span class="success">DATES</span>   ] ${new Date(item.startDate).toLocaleDateString()} - ${endDate}\n`;
-    output += `----------------------------------------------------------------------\n`;
+    output += `[ <span class="success">DURATION</span> ] ${new Date(item.startDate).toLocaleDateString()} - ${endDate}\n`;
+    output += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
     if(item.narrative) {
-        output += `[ <span class="success">NARRATIVE</span> ]\n${item.narrative.replace(/\*\*(.*?)\*\*/g, '<span class="highlight">$1</span>').replace(/`(.*?)`/g, '<span class="success">$1</span>').replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')}\n\n`;
+        output += `[ <span class="success">OVERVIEW</span> ]\n${item.narrative.replace(/\*\*(.*?)\*\*/g, '<span class="highlight">$1</span>').replace(/`(.*?)`/g, '<span class="success">$1</span>').replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')}\n\n`;
     }
     if(item.resumePoints && item.resumePoints.length > 0) {
-         output += `[ <span class="success">KEY CONTRIBUTIONS</span> ]\n${item.resumePoints.map(p => `* ${p}`).join('\n')}\n\n`;
+         output += `[ <span class="success">KEY ACHIEVEMENTS</span> ]\n${item.resumePoints.map(p => `• ${p}`).join('\n')}\n\n`;
     }
     if(item.skillsUsed && item.skillsUsed.length > 0) {
-        output += `[ <span class="success">SKILLS USED</span> ]\n`;
+        output += `[ <span class="success">TECHNOLOGIES</span> ]\n`;
         item.skillsUsed.forEach(cat => {
-            output += `  > <span class="highlight">${cat.category}</span>\n    - ${cat.skills.join('\n    - ')}\n`;
+            output += `  ▸ <span class="highlight">${cat.category}</span>\n    ${cat.skills.join(' • ')}\n`;
         });
         output += `\n`;
     }
      if(item.certifications && item.certifications.length > 0) {
-        output += `[ <span class="success">CERTIFICATIONS</span> ]\n${item.certifications.map(c => `* ${c.name} - <a href="${c.certificateURL}" target="_blank">View Certificate</a>`).join('\n')}\n\n`;
+        output += `[ <span class="success">CERTIFICATIONS</span> ]\n${item.certifications.map(c => `• ${c.name} - <a href="${c.certificateURL}" target="_blank">View Certificate</a>`).join('\n')}\n\n`;
     }
     
     typewriter(output, element, null, 5);
@@ -252,13 +320,13 @@ const handleTheme = (themeName, element) => {
 
 const init = () => {
     const bootSequence = [
-        { text: 'Initializing virtual file system...', delay: 50 },
+        { text: 'Loading career database...', delay: 50 },
         { text: ' [OK]', speed: 10, newline: true },
-        { text: 'Mounting /dev/career/...', delay: 50 },
+        { text: 'Indexing professional experience...', delay: 50 },
         { text: ' [OK]', speed: 10, newline: true },
-        { text: `Compiling ${careerData.personalDetails.fullName}.bin...`, delay: 50 },
+        { text: `Authenticating ${careerData.personalDetails.fullName}...`, delay: 50 },
         { text: ' [OK]', speed: 10, newline: true },
-        { text: '\nConnection established. Welcome.\n', delay: 50, speed: 5 },
+        { text: '\nSystem ready. Access granted.\n', delay: 50, speed: 5 },
     ];
 
     const banner = `
@@ -269,8 +337,8 @@ const init = () => {
 <span class="success">███████║╚██████╔╝██║     ██║  ██║██║   ██║   ╚██████╔╝    ██║     ██║  ██║╚██████╔╝███████╗</span>
 <span class="success">╚══════╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝     ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝</span>
 
-Welcome to my professional journey.
-Type 'help' to see a list of available commands.
+Senior Software Engineer • Python • DevOps • System Architecture
+Interactive career portfolio - Type 'help' to explore my professional experience.
 `;
 
     let currentLine = document.createElement('span');
@@ -328,8 +396,11 @@ commandInput.addEventListener('keydown', (e) => {
     }
 });
 
-terminal.addEventListener('click', () => {
-    commandInput.focus();
+terminal.addEventListener('click', (e) => {
+    // Only focus input if no text is selected and not clicking on a link
+    if (window.getSelection().toString().length === 0 && e.target.tagName !== 'A') {
+        commandInput.focus();
+    }
 });
 
 init();

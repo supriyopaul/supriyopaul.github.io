@@ -38,6 +38,10 @@ body {
     padding: 1rem;
     box-sizing: border-box;
     word-break: break-word;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
 }
 
 /* Add a subtle scanline effect for retro vibe */
@@ -65,6 +69,10 @@ body::after {
 
 #output-container {
     white-space: pre-wrap;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
 }
 
 .input-line {
@@ -92,7 +100,7 @@ body::after {
     width: 10px;
     height: 1.2em;
     background-color: var(--foreground);
-    animation: blink 1s step-end infinite;
+    /* animation: blink 1s step-end infinite; */
     margin-left: -1px; /* Adjust cursor position */
 }
 
