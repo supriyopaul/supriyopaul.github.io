@@ -20,7 +20,8 @@ const careerData = {
       "linkedin": "https://www.linkedin.com/in/supriyopaul95",
       "github": "https://github.com/supriyopaul",
       "website": "https://supriyopaul.github.io/"
-    }
+    },
+    "downloadLink": "https://github.com/supriyopaul/supriyopaul.github.io/blob/master/SupriyoPaul.pdf"
   },
   "timeline": [
     { "id": "exp-hm-2024", "type": "experience", "heading": "Software Engineer II", "organization": { "name": "H&M" }, "role": "Software Engineer II", "startDate": "2024-03-01", "endDate": null, "narrative": "Using `applibot`, I secured my current role at H&M. I work on the central Hub, a platform that acts as a **configurable, low-code workflow** for handling data integrations between our \"Centric\" PLM system and **over 10+ downstream systems**. My responsibilities include owning multiple business objects, overseeing their integrations, and maintaining our core modules and ETL pipelines on **Google Cloud Platform (GCP)**, using services like **Cloud Run, GKE, and SpannerDB**. I am deeply involved in the entire SDLC, from solution design to production support. Outside of my technical responsibilities, I'm an active part of the company culture and a keen **badminton** player, having won several internal tournaments.", "resumePoints": [ "Developing an integration platform to handle complex business objects to and from PLM software APIs and other in-house applications, making them available in a standardized format for over 10+ downstream systems.", "This involves creating a configurable, no-code workflow to streamline and automate the process." ], "skillsUsed": [ {"category": "DEVOPS & TOOLS", "skills": ["Google Cloud Platform (GCP)", "GKE"]}, {"category": "DATABASES", "skills": ["SpannerDB"]}, {"category": "PROGRAMMING LANGUAGES", "skills": ["Python"]}, {"category": "TECHNOLOGIES & CONCEPTS", "skills": ["PLM systems", "Enterprise Integration Patterns", "End-to-End SDLC Ownership"]} ], "personalInterests": ["Badminton"] },
@@ -102,6 +103,10 @@ const processCommand = (command) => {
         case 'contact':
             handleContact(commandOutputDiv);
             break;
+        case 'resume':
+        case 'download':
+            handleResume(commandOutputDiv);
+            break;
         case 'cat':
             handleCat(args[0], commandOutputDiv);
             break;
@@ -127,6 +132,7 @@ const handleHelp = (element) => {
   <span class="success">education</span>    - Detail my educational background.
   <span class="success">skills</span>       - List my technical skills, grouped by category.
   <span class="success">contact</span>      - Show my contact information and social links.
+  <span class="success">resume</span>       - Download my latest resume.
   <span class="success">cat &lt;id&gt;</span>     - Display detailed information (e.g., 'cat exp-hm-2024').
   <span class="success">theme &lt;name&gt;</span> - Change theme (dracula, hacker, solarized-light).
   <span class="success">clear</span>        - Clear the terminal screen.`;
@@ -181,6 +187,21 @@ LinkedIn: <a href="${c.linkedin}" target="_blank">${c.linkedin}</a>
 GitHub:   <a href="${c.github}" target="_blank">${c.github}</a>
 Website:  <a href="${c.website}" target="_blank">${c.website}</a>`;
     typewriter(contactText, element);
+};
+
+const handleResume = (element) => {
+    const downloadLink = careerData.personalDetails.downloadLink;
+    const resumeText = `Opening resume download...
+    
+<span class="success">📄 Resume Download</span>
+<a href="${downloadLink}" target="_blank" download>Click here to download my latest resume (PDF)</a>
+
+Or copy this link: ${downloadLink}`;
+    
+    typewriter(resumeText, element, () => {
+        // Automatically open the download link
+        window.open(downloadLink, '_blank');
+    });
 };
 
 const handleCat = (id, element) => {
