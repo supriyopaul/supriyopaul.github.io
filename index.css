@@ -5,17 +5,25 @@
     --success: #50fa7b;
     --link: #ff79c9;
     --error: #ff5555;
-    --highlight: #6272a4;
+    --highlight: #bd93f9;
+    --accent: #ffb86c;
+    --secondary: #f1fa8c;
+    --muted: #6272a4;
+    --border: #44475a;
 }
 
 [data-theme="hacker"] {
-    --background: #000000;
-    --foreground: #00FF00;
-    --prompt: #00FF00;
-    --success: #00FF00;
-    --link: #00FF00;
-    --error: #FF0000;
-    --highlight: #333333;
+    --background: #0a0a0a;
+    --foreground: #00ff41;
+    --prompt: #00ff88;
+    --success: #39ff14;
+    --link: #ff6600;
+    --error: #ff073a;
+    --highlight: #00ccff;
+    --accent: #ffff00;
+    --secondary: #ff00ff;
+    --muted: #008000;
+    --border: #333333;
 }
 
 [data-theme="solarized-light"] {
@@ -25,7 +33,11 @@
     --success: #859900;
     --link: #d33682;
     --error: #dc322f;
-    --highlight: #eee8d5;
+    --highlight: #b58900;
+    --accent: #cb4b16;
+    --secondary: #2aa198;
+    --muted: #93a1a1;
+    --border: #eee8d5;
 }
 
 body {
@@ -116,24 +128,151 @@ body::after {
 a {
     color: var(--link);
     text-decoration: underline;
+    transition: all 0.2s ease;
 }
 
 a:hover {
-    opacity: 0.8;
+    color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
 }
 
 .success { 
-    color: var(--success); 
+    color: var(--success);
+    font-weight: 500;
 }
 
 .error { 
-    color: var(--error); 
+    color: var(--error);
+    font-weight: 500;
 }
 
 .highlight { 
-    color: var(--highlight); 
+    color: var(--highlight);
+    font-weight: 600;
 }
 
+.accent {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.secondary {
+    color: var(--secondary);
+}
+
+.muted {
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* Section headers styling */
+.section-header {
+    color: var(--success);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 3px solid var(--accent);
+    padding-left: 8px;
+    margin: 10px 0;
+}
+
+/* Command categories styling */
+.command-category {
+    color: var(--highlight);
+    font-weight: 600;
+}
+
+/* Timeline entries */
+.timeline-entry {
+    border-left: 2px solid var(--border);
+    padding-left: 10px;
+    margin: 5px 0;
+}
+
+.timeline-id {
+    color: var(--highlight);
+    background: var(--border);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.timeline-date {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.timeline-title {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Skills and technologies */
+.skill-category {
+    color: var(--highlight);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-item {
+    color: var(--secondary);
+    font-weight: 400;
+}
+
+/* Separators and dividers */
+.divider {
+    color: var(--border);
+    opacity: 0.6;
+}
+
+/* Boot sequence styling */
+.boot-text {
+    color: var(--muted);
+}
+
+.boot-ok {
+    color: var(--success);
+    font-weight: 600;
+}
+
+/* Banner styling */
+.banner-text {
+    color: var(--success);
+    text-shadow: 0 0 10px var(--success);
+}
+
+.banner-subtitle {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* Input styling enhancements */
+.prompt {
+    color: var(--prompt);
+    font-weight: 600;
+    text-shadow: 0 0 5px var(--prompt);
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: inherit;
+    flex-grow: 1;
+    outline: none;
+    caret-color: var(--accent);
+}
+
+/* Command output styling */
 .command-output {
     margin-bottom: 1rem;
+    padding: 5px 0;
+    border-left: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.command-output:hover {
+    border-left-color: var(--border);
 }

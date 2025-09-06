@@ -193,22 +193,23 @@ const processCommand = (command) => {
 };
 
 const handleHelp = (element) => {
-    const helpText = `Available commands:
-  <span class="success">about</span>        - Professional summary and core competencies
-  <span class="success">experience</span>   - Work history and career progression
-  <span class="success">projects</span>     - Portfolio of personal and professional projects
-  <span class="success">education</span>    - Academic background and qualifications
-  <span class="success">skills</span>       - Technical expertise organized by category
-  <span class="success">contact</span>      - Professional contact information and social profiles
-  <span class="success">resume</span>       - Download comprehensive CV (PDF format)
-  <span class="success">cat &lt;id&gt;</span>     - Detailed view of specific entry (e.g., 'cat exp-hm-2024')
-  <span class="success">theme &lt;name&gt;</span> - Switch interface theme (dracula, hacker, solarized-light)
-  <span class="success">clear</span>        - Clear terminal output`;
+    const helpText = `<span class="section-header">Available Commands</span>
+  <span class="accent">about</span>        - Professional summary and core competencies
+  <span class="accent">experience</span>   - Work history and career progression
+  <span class="accent">projects</span>     - Portfolio of personal and professional projects
+  <span class="accent">education</span>    - Academic background and qualifications
+  <span class="accent">skills</span>       - Technical expertise organized by category
+  <span class="accent">contact</span>      - Professional contact information and social profiles
+  <span class="accent">resume</span>       - Download comprehensive CV (PDF format)
+  <span class="accent">cat &lt;id&gt;</span>     - Detailed view of specific entry (e.g., 'cat <span class="highlight">exp-hm-2024</span>')
+  <span class="accent">theme &lt;name&gt;</span> - Switch interface theme (<span class="secondary">dracula</span>, <span class="secondary">hacker</span>, <span class="secondary">solarized-light</span>)
+  <span class="accent">clear</span>        - Clear terminal output`;
     fastTypewriter(helpText, element);
 };
 
 const handleAbout = (element) => {
-    const aboutText = careerData.personalDetails.brandingStatements.map(s => `* ${s}`).join('\n');
+    const aboutText = `<span class="section-header">Professional Summary</span>\n` + 
+        careerData.personalDetails.brandingStatements.map(s => `<span class="accent">•</span> ${s}`).join('\n');
     typewriter(aboutText, element, null, 10);
 };
 
@@ -217,12 +218,12 @@ const handleTimeline = (type, element) => {
     careerData.timeline.filter(item => item.type === type).forEach(item => {
         const endDate = item.endDate ? new Date(item.endDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : 'Present';
         const startDate = new Date(item.startDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-        const id = `[<span class="highlight">${item.id.padEnd(20, ' ')}</span>]`;
-        const dates = `${startDate} - ${endDate}`.padEnd(25, ' ');
-        const heading = `${item.heading} @ ${item.organization.name}`;
-        output += `${id}${dates}${heading}\n`;
+        const id = `[<span class="timeline-id">${item.id.padEnd(20, ' ')}</span>]`;
+        const dates = `<span class="timeline-date">${startDate} - ${endDate}</span>`.padEnd(35, ' ');
+        const heading = `<span class="timeline-title">${item.heading}</span> <span class="muted">@</span> <span class="secondary">${item.organization.name}</span>`;
+        output += `${id} ${dates} ${heading}\n`;
     });
-    output += `\nFor detailed information, use 'cat &lt;id&gt;' (example: 'cat ${careerData.timeline.find(item => item.type === type).id}')`;
+    output += `\n<span class="muted">For detailed information, use</span> <span class="accent">cat &lt;id&gt;</span> <span class="muted">(example:</span> <span class="highlight">cat ${careerData.timeline.find(item => item.type === type).id}</span><span class="muted">)</span>`;
     fastTypewriter(output, element);
 };
 
@@ -239,32 +240,33 @@ const handleSkills = (element) => {
         }
     });
 
-    let output = 'Compiling technical expertise across all roles...\n\n';
+    let output = '<span class="muted">Compiling technical expertise across all roles...</span>\n\n';
     for (const category in skillsByCategory) {
-        output += `▸ <span class="success">${category.toUpperCase()}</span>\n`;
-        output += `  ${Array.from(skillsByCategory[category]).join(' • ')}\n\n`;
+        output += `<span class="skill-category">▸ ${category.toUpperCase()}</span>\n`;
+        output += `  <span class="skill-item">${Array.from(skillsByCategory[category]).join(' <span class="accent">•</span> ')}</span>\n\n`;
     }
     typewriter(output, element, null, 5);
 };
 
 const handleContact = (element) => {
     const c = careerData.personalDetails.contact;
-    const contactText = `Email:    <a href="mailto:${c.email}">${c.email}</a>
-Phone:    ${c.phone}
-LinkedIn: <a href="${c.linkedin}" target="_blank">${c.linkedin}</a>
-GitHub:   <a href="${c.github}" target="_blank">${c.github}</a>
-Website:  <a href="${c.website}" target="_blank">${c.website}</a>`;
+    const contactText = `<span class="section-header">Contact Information</span>
+<span class="accent">Email:</span>    <a href="mailto:${c.email}">${c.email}</a>
+<span class="accent">Phone:</span>    <span class="secondary">${c.phone}</span>
+<span class="accent">LinkedIn:</span> <a href="${c.linkedin}" target="_blank">${c.linkedin}</a>
+<span class="accent">GitHub:</span>   <a href="${c.github}" target="_blank">${c.github}</a>
+<span class="accent">Website:</span>  <a href="${c.website}" target="_blank">${c.website}</a>`;
     fastTypewriter(contactText, element);
 };
 
 const handleResume = (element) => {
     const downloadLink = careerData.personalDetails.downloadLink;
-    const resumeText = `Initiating resume download...
+    const resumeText = `<span class="muted">Initiating resume download...</span>
     
-<span class="success">📄 Comprehensive CV</span>
-<a href="${downloadLink}" target="_blank" download>Download latest resume (PDF format)</a>
+<span class="section-header">📄 Comprehensive CV</span>
+<a href="${downloadLink}" target="_blank" download><span class="accent">Download latest resume</span> <span class="muted">(PDF format)</span></a>
 
-Direct link: ${downloadLink}`;
+<span class="muted">Direct link:</span> <span class="secondary">${downloadLink}</span>`;
     
     fastTypewriter(resumeText, element, () => {
         // Automatically open the download link
@@ -283,26 +285,26 @@ const handleCat = (id, element) => {
         return;
     }
     
-    let output = `> Loading profile: ${id}...\n\n`;
-    output += `[ <span class="success">POSITION</span> ] ${item.heading} @ ${item.organization.name}\n`;
+    let output = `<span class="muted">> Loading profile:</span> <span class="highlight">${id}</span><span class="muted">...</span>\n\n`;
+    output += `[ <span class="section-header">POSITION</span> ] <span class="accent">${item.heading}</span> <span class="muted">@</span> <span class="secondary">${item.organization.name}</span>\n`;
     const endDate = item.endDate ? new Date(item.endDate).toLocaleDateString() : 'Present';
-    output += `[ <span class="success">DURATION</span> ] ${new Date(item.startDate).toLocaleDateString()} - ${endDate}\n`;
-    output += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    output += `[ <span class="section-header">DURATION</span> ] <span class="timeline-date">${new Date(item.startDate).toLocaleDateString()} - ${endDate}</span>\n`;
+    output += `<span class="divider">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>\n`;
     if(item.narrative) {
-        output += `[ <span class="success">OVERVIEW</span> ]\n${item.narrative.replace(/\*\*(.*?)\*\*/g, '<span class="highlight">$1</span>').replace(/`(.*?)`/g, '<span class="success">$1</span>').replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')}\n\n`;
+        output += `[ <span class="section-header">OVERVIEW</span> ]\n${item.narrative.replace(/\*\*(.*?)\*\*/g, '<span class="highlight">$1</span>').replace(/`(.*?)`/g, '<span class="accent">$1</span>').replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')}\n\n`;
     }
     if(item.resumePoints && item.resumePoints.length > 0) {
-         output += `[ <span class="success">KEY ACHIEVEMENTS</span> ]\n${item.resumePoints.map(p => `• ${p}`).join('\n')}\n\n`;
+         output += `[ <span class="section-header">KEY ACHIEVEMENTS</span> ]\n${item.resumePoints.map(p => `<span class="accent">•</span> ${p}`).join('\n')}\n\n`;
     }
     if(item.skillsUsed && item.skillsUsed.length > 0) {
-        output += `[ <span class="success">TECHNOLOGIES</span> ]\n`;
+        output += `[ <span class="section-header">TECHNOLOGIES</span> ]\n`;
         item.skillsUsed.forEach(cat => {
-            output += `  ▸ <span class="highlight">${cat.category}</span>\n    ${cat.skills.join(' • ')}\n`;
+            output += `  <span class="skill-category">▸ ${cat.category}</span>\n    <span class="skill-item">${cat.skills.join(' <span class="accent">•</span> ')}</span>\n`;
         });
         output += `\n`;
     }
      if(item.certifications && item.certifications.length > 0) {
-        output += `[ <span class="success">CERTIFICATIONS</span> ]\n${item.certifications.map(c => `• ${c.name} - <a href="${c.certificateURL}" target="_blank">View Certificate</a>`).join('\n')}\n\n`;
+        output += `[ <span class="section-header">CERTIFICATIONS</span> ]\n${item.certifications.map(c => `<span class="accent">•</span> <span class="secondary">${c.name}</span> - <a href="${c.certificateURL}" target="_blank">View Certificate</a>`).join('\n')}\n\n`;
     }
     
     typewriter(output, element, null, 5);
@@ -311,11 +313,11 @@ const handleCat = (id, element) => {
 const handleTheme = (themeName, element) => {
     const validThemes = ['dracula', 'hacker', 'solarized-light'];
     if (!themeName || !validThemes.includes(themeName)) {
-        typewriter(`<span class="error">Invalid theme.</span>\nAvailable themes: ${validThemes.join(', ')}`, element);
+        typewriter(`<span class="error">Invalid theme.</span>\n<span class="muted">Available themes:</span> <span class="secondary">${validThemes.join('</span>, <span class="secondary">')}</span>`, element);
         return;
     }
     document.body.dataset.theme = themeName;
-    typewriter(`Theme changed to <span class="success">${themeName}</span>.`, element);
+    typewriter(`<span class="muted">Theme changed to</span> <span class="accent">${themeName}</span><span class="muted">.</span>`, element);
 };
 
 const init = () => {
@@ -330,15 +332,15 @@ const init = () => {
     ];
 
     const banner = `
-<span class="success">███████╗██╗   ██╗██████╗ ██████╗ ██╗██╗   ██╗ ██████╗     ██████╗  █████╗ ██╗   ██╗██╗     </span>
-<span class="success">██╔════╝██║   ██║██╔══██╗██╔══██╗██║╚██╗ ██╔╝██╔═══██╗    ██╔══██╗██╔══██╗██║   ██║██║     </span>
-<span class="success">███████╗██║   ██║██████╔╝██████╔╝██║ ╚████╔╝ ██║   ██║    ██████╔╝███████║██║   ██║██║     </span>
-<span class="success">╚════██║██║   ██║██╔═══╝ ██╔══██╗██║  ╚██╔╝  ██║   ██║    ██╔═══╝ ██╔══██║██║   ██║██║     </span>
-<span class="success">███████║╚██████╔╝██║     ██║  ██║██║   ██║   ╚██████╔╝    ██║     ██║  ██║╚██████╔╝███████╗</span>
-<span class="success">╚══════╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝     ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝</span>
+<span class="banner-text">███████╗██╗   ██╗██████╗ ██████╗ ██╗██╗   ██╗ ██████╗     ██████╗  █████╗ ██╗   ██╗██╗     </span>
+<span class="banner-text">██╔════╝██║   ██║██╔══██╗██╔══██╗██║╚██╗ ██╔╝██╔═══██╗    ██╔══██╗██╔══██╗██║   ██║██║     </span>
+<span class="banner-text">███████╗██║   ██║██████╔╝██████╔╝██║ ╚████╔╝ ██║   ██║    ██████╔╝███████║██║   ██║██║     </span>
+<span class="banner-text">╚════██║██║   ██║██╔═══╝ ██╔══██╗██║  ╚██╔╝  ██║   ██║    ██╔═══╝ ██╔══██║██║   ██║██║     </span>
+<span class="banner-text">███████║╚██████╔╝██║     ██║  ██║██║   ██║   ╚██████╔╝    ██║     ██║  ██║╚██████╔╝███████╗</span>
+<span class="banner-text">╚══════╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝     ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝</span>
 
-Senior Software Engineer • Python • DevOps • System Architecture
-Interactive career portfolio - Type 'help' to explore my professional experience.
+<span class="banner-subtitle">Senior Software Engineer</span> <span class="accent">•</span> <span class="secondary">Python</span> <span class="accent">•</span> <span class="highlight">DevOps</span> <span class="accent">•</span> <span class="secondary">System Architecture</span>
+<span class="muted">Interactive career portfolio - Type</span> <span class="accent">'help'</span> <span class="muted">to explore my professional experience.</span>
 `;
 
     let currentLine = document.createElement('span');
