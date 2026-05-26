@@ -17,7 +17,7 @@ const careerData = {
       "email": "paul.supriyo.paul@gmail.com",
       "phone": "+91 8340265344",
       "location": "Whitefield, Bengaluru",
-      "linkedin": "https://www.linkedin.com/in/supriyopaul95",
+      "linkedin": "https://www.linkedin.com/in/supriyo-paul/",
       "github": "https://github.com/supriyopaul",
       "website": "https://supriyopaul.github.io/"
     },
