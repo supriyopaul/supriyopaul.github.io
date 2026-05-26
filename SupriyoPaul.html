@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supriyo Paul - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resume-page {
+            width: 210mm;
+            height: 297mm;
+            background-color: #ffffff;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+            color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        /* --- Sidebar (Left Column) --- */
+        .sidebar {
+            width: 35%;
+            background-color: #82b5f2; /* Matched to the image's light blue */
+            padding: 25px 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Default left alignment */
+        }
+
+        .profile-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .profile-img-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 12px;
+            background-color: #cbdcf2; /* Fallback */
+            border: 2px solid transparent;
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 23px;
+            font-weight: 700;
+            text-transform: capitalize;
+            margin: 0 0 6px 0;
+            text-align: center;
+            letter-spacing: 1.2px;
+        }
+
+        .title {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 1.5px;
+            text-align: center;
+            color: #222;
+        }
+
+        .sidebar-section {
+            width: 100%;
+            margin-bottom: 18px;
+        }
+
+        .sidebar-heading {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 3px;
+            margin-bottom: 12px;
+            letter-spacing: 0.8px;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 11.5px;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 8px;
+            font-size: 14px;
+            color: #1a1a1a;
+            flex-shrink: 0;
+        }
+
+        .contact-list a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .edu-dates {
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+
+        .edu-degree {
+            font-size: 11.5px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .edu-school {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .cert-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cert-list li {
+            margin-bottom: 10px;
+            font-size: 11.5px;
+            line-height: 1.3;
+        }
+
+        .cert-list a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+
+        /* --- Main Content (Right Column) --- */
+        .main-content {
+            width: 65%;
+            padding: 25px 25px;
+            box-sizing: border-box;
+        }
+
+        .main-heading {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 3px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 0.8px;
+        }
+
+        .summary-list {
+            padding-left: 15px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .summary-list li {
+            font-size: 11.5px;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+        
+        .summary-list a {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        .experience-section {
+            margin-bottom: 15px;
+        }
+
+        .exp-item {
+            margin-bottom: 14px;
+        }
+
+        .exp-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .company-logo {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 8px;
+            font-size: 8px;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .logo-hm { background-color: #e50010; font-style: italic; }
+        .logo-jio { background-color: #0f3c9e; }
+        .logo-ajio { background-color: #000000; }
+        .logo-deepcompute { background-color: #fff; border: 1px solid #ccc; position: relative; }
+        /* Simple geometric representation for Deepcompute logo */
+        .logo-deepcompute::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: conic-gradient(from 90deg, #4285f4 0 120deg, #34a853 120deg 240deg, #fbbc05 240deg);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .company-name {
+            font-size: 12.5px;
+            font-weight: 600;
+        }
+
+        .exp-date {
+            margin-left: auto;
+            font-size: 11.5px;
+            font-style: italic;
+            color: #444;
+        }
+
+        .exp-role {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 2px 0 5px 0;
+        }
+
+        .exp-details {
+            padding-left: 15px;
+            margin: 0;
+        }
+
+        .exp-details li {
+            font-size: 11.5px;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+
+        /* --- Skills Section --- */
+        .skills-grid {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill-column {
+            width: 32%;
+        }
+
+        .skill-heading {
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 6px 0;
+            line-height: 1.2;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-list li {
+            font-size: 11px;
+            margin-bottom: 3px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1a1a1a;
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+                margin: 0;
+            }
+            .resume-page {
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+    </style>
+</head>
+<body>
+
+<div class="resume-page">
+    <div class="sidebar">
+        
+        <div class="profile-section">
+            <div class="profile-img-container">
+                <img src="dp.jpeg" alt="Supriyo Paul">
+            </div>
+            <h1 class="name">Supriyo Paul</h1>
+            <h2 class="title">SENIOR SOFTWARE ENGINEER</h2>
+        </div>
+
+        <div class="sidebar-section">
+            <h2 class="sidebar-heading">CONTACT</h2>
+            <ul class="contact-list">
+                <li>
+                    <span class="contact-icon"><i class="fa-regular fa-envelope"></i></span>
+                    paul.supriyo.paul@gmail.com
+                </li>
+                <li>
+                    <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                    +91 8340265344
+                </li>
+                <li>
+                    <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
+                    <a href="https://github.com/supriyopaul">github.com/supriyopaul</a>
+                </li>
+                <li>
+                    <span class="contact-icon"><i class="fa-brands fa-linkedin-in" style="border: 1px solid #111; border-radius: 50%; padding: 3px; font-size: 14px; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;"></i></span>
+                    <a href="https://www.linkedin.com/in/supriyo-paul/">linkedin.com/in/supriyo-paul/</a>
+                </li>
+                <li>
+                    <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    Whitefield, Bengaluru
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <h2 class="sidebar-heading">EDUCATION</h2>
+            
+            <div class="education-item">
+                <div class="edu-dates">2013-2017</div>
+                <div class="edu-degree">BACHELOR OF TECHNOLOGY,<br>COMPUTER SCIENCE</div>
+                <div class="edu-school">Mallabhum Institute of Technology</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="edu-dates">2011-2013</div>
+                <div class="edu-degree">HIGH SCHOOL</div>
+                <div class="edu-school">D.A.V Public School</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="edu-dates">2000-2011</div>
+                <div class="edu-degree">SCHOOL</div>
+                <div class="edu-school">De Nobili School</div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h2 class="sidebar-heading">Certificates</h2>
+            <ul class="cert-list">
+                <li><a href="https://www.coursera.org/account/accomplishments/certificate/JMQWSQBKDSZC" target="_blank">AI for everyone, Deeplearning.ai</a></li>
+                <li><a href="https://www.udemy.com/certificate/UC-1dd3f3c2-d8ad-46b5-9a09-801f26cf0df6/" target="_blank">Protocol Buffers, Udemy</a></li>
+                <li><a href="https://www.udemy.com/certificate/UC-d119c94a-5051-48e0-8f9b-6298c8975b81/" target="_blank">Data Structures & Algorithms, Udemy</a></li>
+                <li><a href="https://www.udemy.com/certificate/UC-a6688b24-e5c2-48e2-9c10-231f972eae68/" target="_blank">System Design, Udemy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        
+        <h2 class="main-heading">SUMMARY</h2>
+        <ul class="summary-list">
+            <li>Senior Software Engineer specializing in Python development, DevOps infrastructure, and end-to-end automation engineering.</li>
+            <li>Proven expertise in system design, deploying distributed microservices, ETL pipelines, and integration platforms on GCP and Kubernetes.</li>
+            <li>Extensive background in scalable big data platforms, including ArangoDB knowledge graphs and ELK/Kafka clusters processing 7+ billion records daily.</li>
+            <li>Experienced in integrating LLM frameworks and RAG architectures using FastAPI, LangChain, LanceDB, and PostgreSQL for automation tools like <a href="https://applibot.io" target="_blank">applibot.io</a>.</li>
+            <li>Strong advocate for high software quality, clean code standards, robust CI/CD pipelines, and engineering team mentorship.</li>
+        </ul>
+
+        <h2 class="main-heading">EXPERIENCE</h2>
+        
+        <div class="experience-section">
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="company-logo logo-hm">H&M</div>
+                    <span class="company-name">H&M</span>
+                    <span class="exp-date">Mar 2024-Present</span>
+                </div>
+                <div class="exp-role">SOFTWARE ENGINEER II</div>
+                <ul class="exp-details">
+                    <li>Developing an <strong>Integration platform</strong> to handle complex business objects to and from <strong>PLM software, ERPs</strong>, and other in-house applications making them available a standardized format for over 10+ downstream systems. This involves creating a configurable, <strong>no-code workflow</strong> to streamline and automate the process.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="company-logo logo-jio">Jio</div>
+                    <span class="company-name">Jio Platforms Private Limited</span>
+                    <span class="exp-date">Sep 2021- Mar 2024</span>
+                </div>
+                <div class="exp-role">SOFTWARE ENGINEER II</div>
+                <ul class="exp-details">
+                    <li>Engineered a comprehensive <strong>Knowledge-graph platform</strong>, encompassing <strong>micro-services</strong> like Schema, Data, and Search, to facilitate the semantic storage and retrieval of domain knowledge, enhancing data accessibility and interoperability.</li>
+                    <li>Spearheaded the <strong>performance monitoring, scaling</strong>, and <strong>refinement</strong> of <strong>Knowledge Graph Services</strong>, ensuring optimal scalability for <strong>Big Data ingestion</strong> and retrieval, and enhancing service reliability and efficiency.</li>
+                    <li>Provided <strong>mentorship</strong> on best practices and maintainability within the AICOE's AI Platform, fostering a culture of knowledge sharing and continuous improvement within the team.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="company-logo logo-ajio">AJIO</div>
+                    <span class="company-name">Ajio</span>
+                    <span class="exp-date">Sep 2019 - Sep 2021</span>
+                </div>
+                <div class="exp-role">DEVOPS ENGINEER</div>
+                <ul class="exp-details">
+                    <li>Engineered and deployed multiple robust clusters designed for <strong>extensive log aggregation</strong>, capable of processing over <strong>7 billion records daily</strong>, alongside conducting comprehensive load testing for the <strong>in-house cloud infrastructure platform</strong>, JAWS.</li>
+                    <li>Oversaw and optimized the scalability of <strong>ELK and Kafka clusters</strong> to accommodate the diverse operational needs across various Jio business units, ensuring seamless data flow and <strong>reduced system latency</strong>.</li>
+                    <li>Founded and led the <strong>Tools & Automation team</strong> at Ajio, implementing strategic automation solutions to streamline workflows and eliminate redundant tasks across multiple departments, enhancing overall operational efficiency.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="company-logo logo-deepcompute"></div>
+                    <span class="company-name">Deepcompute LLC</span>
+                    <span class="exp-date">Aug 2017 - Sep 2019</span>
+                </div>
+                <div class="exp-role">ASSOCIATE SOFTWARE ENGINEER</div>
+                <ul class="exp-details">
+                    <li>Collaborated with cross-functional teams to develop and enhance <strong>open-source libraries</strong> and modules such as <u>logagg</u>, <u>basescript</u>, <u>deeputil</u>, contributing to the creation of versatile and <strong>reusable software components</strong>.</li>
+                    <li>Played a pivotal role in application development and facilitated teams in <strong>managing deployments</strong> and <strong>logs</strong>, establishing and enforcing stringent benchmarks for <strong>code quality</strong> to ensure the delivery of robust and efficient software solutions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="main-heading">SKILLS</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-column">
+                <h3 class="skill-heading">TECHNOLOGIES &<br>CONCEPTS</h3>
+                <ul class="skill-list">
+                    <li>System design</li>
+                    <li>Microservices</li>
+                    <li>LLM frameworks (RAG,<br>Langchain)</li>
+                    <li>NLP</li>
+                    <li>Protocol Buffers (gRPC)</li>
+                    <li>Rest APIs (FastAPI)</li>
+                    <li>CI/CD</li>
+                    <li>Knowledge modelling</li>
+                    <li>OOPs</li>
+                    <li>Dashboarding</li>
+                </ul>
+            </div>
+            
+            <div class="skill-column">
+                <h3 class="skill-heading">PROGRAMMING<br>LANGUAGES</h3>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>Bash</li>
+                </ul>
+                
+                <h3 class="skill-heading">DATABASES</h3>
+                <ul class="skill-list">
+                    <li>Postgres</li>
+                    <li>LanceDB</li>
+                    <li>ArangoDB</li>
+                    <li>ElasticSearch</li>
+                    <li>MongoDB</li>
+                    <li>InfluxDB</li>
+                    <li>Redis</li>
+                </ul>
+            </div>
+            
+            <div class="skill-column">
+                <h3 class="skill-heading">DEVOPS<br>TOOLS</h3>
+                <ul class="skill-list">
+                    <li>Linux</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Azure DevOps</li>
+                    <li>GCP</li>
+                    <li>Ansible</li>
+                    <li>Elastic Stack (ELK)</li>
+                    <li>Prometheus</li>
+                    <li>Travis CI</li>
+                    <li>Kibana</li>
+                    <li>Grafana</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

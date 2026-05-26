@@ -218,7 +218,7 @@ const handleHelp = (element) => {
   <span class="accent">skills</span>       - Technical expertise organized by category
   <span class="accent">certifications</span> - Professional certifications and achievements
   <span class="accent">contact</span>      - Professional contact information and social profiles
-  <span class="accent">resume</span>       - Download comprehensive CV (PDF format)
+  <span class="accent">resume</span>       - View interactive HTML or download PDF CV
   <span class="accent">cat &lt;id&gt;</span>     - Detailed view of specific entry (e.g., 'cat <span class="highlight">exp-hm-2024</span>')
   <span class="accent">theme &lt;name&gt;</span> - Switch interface theme (<span class="secondary">dracula</span>, <span class="secondary">hacker</span>, <span class="secondary">solarized-light</span>)
   <span class="accent">clear</span>        - Clear terminal output`;
@@ -311,16 +311,17 @@ const handleContact = (element) => {
 
 const handleResume = (element) => {
     const downloadLink = careerData.personalDetails.downloadLink;
-    const resumeText = `<span class="muted">Initiating resume download...</span>
+    const resumeText = `<span class="muted">Opening resume options...</span>
     
-<span class="section-header">📄 Comprehensive CV</span>
-<a href="${downloadLink}" target="_blank" download><span class="accent">Download latest resume</span> <span class="muted">(PDF format)</span></a>
+<span class="section-header">📄 Resume Formats</span>
+  <span class="accent">1. Web Version (HTML)</span> - <a href="SupriyoPaul.html" target="_blank"><span class="highlight">View Interactive HTML Resume</span></a>
+  <span class="accent">2. Print Version (PDF)</span> - <a href="${downloadLink}" target="_blank" download><span class="highlight">Download PDF Resume</span></a>
 
-<span class="muted">Direct link:</span> <span class="secondary">${downloadLink}</span>`;
+<span class="muted">Direct web link:</span> <a href="SupriyoPaul.html" target="_blank">SupriyoPaul.html</a>`;
     
     fastTypewriter(resumeText, element, () => {
-        // Automatically open the download link
-        window.open(downloadLink, '_blank');
+        // Automatically open the interactive HTML version in a new tab
+        window.open('SupriyoPaul.html', '_blank');
     });
 };
 
