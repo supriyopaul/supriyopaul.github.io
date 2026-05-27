@@ -278,41 +278,29 @@
         }
 
         /* --- Skills Section --- */
-        .skills-grid {
+        .skills-container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 8px;
         }
 
-        .skill-column {
-            width: 32%;
-        }
-
-        .skill-heading {
+        .skill-group {
+            display: flex;
             font-size: 11.5px;
+            line-height: 1.45;
+        }
+
+        .skill-group-title {
             font-weight: 700;
+            width: 28%;
             text-transform: uppercase;
-            margin: 0 0 6px 0;
-            line-height: 1.2;
-        }
-
-        .skill-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .skill-list li {
-            font-size: 11px;
-            margin-bottom: 3px;
-            position: relative;
-            padding-left: 10px;
-        }
-
-        .skill-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
+            letter-spacing: 0.5px;
             color: #1a1a1a;
+        }
+
+        .skill-group-items {
+            width: 72%;
+            color: #333;
         }
 
         @media print {
@@ -478,57 +466,22 @@
 
         <h2 class="main-heading">SKILLS</h2>
         
-        <div class="skills-grid">
-            <div class="skill-column">
-                <h3 class="skill-heading">TECHNOLOGIES &<br>CONCEPTS</h3>
-                <ul class="skill-list">
-                    <li>System design</li>
-                    <li>Microservices</li>
-                    <li>LLM frameworks (RAG,<br>Langchain)</li>
-                    <li>NLP</li>
-                    <li>Protocol Buffers (gRPC)</li>
-                    <li>Rest APIs (FastAPI)</li>
-                    <li>CI/CD</li>
-                    <li>Knowledge modelling</li>
-                    <li>OOPs</li>
-                    <li>Dashboarding</li>
-                </ul>
+        <div class="skills-container">
+            <div class="skill-group">
+                <span class="skill-group-title">Concepts</span>
+                <span class="skill-group-items">System Design • Microservices • LLM Frameworks (RAG, LangChain) • NLP • Protocol Buffers (gRPC) • REST APIs (FastAPI) • CI/CD • Knowledge Modeling • OOP • Dashboarding</span>
             </div>
-            
-            <div class="skill-column">
-                <h3 class="skill-heading">PROGRAMMING<br>LANGUAGES</h3>
-                <ul class="skill-list">
-                    <li>Python</li>
-                    <li>Bash</li>
-                </ul>
-                
-                <h3 class="skill-heading">DATABASES</h3>
-                <ul class="skill-list">
-                    <li>Postgres</li>
-                    <li>LanceDB</li>
-                    <li>ArangoDB</li>
-                    <li>ElasticSearch</li>
-                    <li>MongoDB</li>
-                    <li>InfluxDB</li>
-                    <li>Redis</li>
-                </ul>
+            <div class="skill-group">
+                <span class="skill-group-title">Languages</span>
+                <span class="skill-group-items">Python • Bash</span>
             </div>
-            
-            <div class="skill-column">
-                <h3 class="skill-heading">DEVOPS<br>TOOLS</h3>
-                <ul class="skill-list">
-                    <li>Linux</li>
-                    <li>Docker</li>
-                    <li>Kubernetes</li>
-                    <li>Azure DevOps</li>
-                    <li>GCP</li>
-                    <li>Ansible</li>
-                    <li>Elastic Stack (ELK)</li>
-                    <li>Prometheus</li>
-                    <li>Travis CI</li>
-                    <li>Kibana</li>
-                    <li>Grafana</li>
-                </ul>
+            <div class="skill-group">
+                <span class="skill-group-title">Databases</span>
+                <span class="skill-group-items">PostgreSQL • LanceDB • ArangoDB • Elasticsearch • MongoDB • InfluxDB • Redis</span>
+            </div>
+            <div class="skill-group">
+                <span class="skill-group-title">DevOps & Tools</span>
+                <span class="skill-group-items">Linux • Docker • Kubernetes • Azure DevOps • GCP • Ansible • Elastic Stack (ELK) • Prometheus • Travis CI • Kibana • Grafana</span>
             </div>
         </div>
 
